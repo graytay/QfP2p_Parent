@@ -1,0 +1,131 @@
+﻿@charset 'utf-8';
+
+.ui-radio, .ui-checkbox {
+    label {
+        @include inline-block;
+        font-family: $baseSongTi;
+        font-size: 12px;
+        padding: 8px 12px;
+        cursor: pointer;
+        color: nth($blueAsh,2);
+        border: 2px solid nth($gery,3);
+        background: url('../Images/bg/nocheck.jpg') no-repeat bottom right;
+        margin-bottom: 3px;
+        margin-right: 6px;
+
+        input {
+            display: none;
+            display /*\**/: inline-block \9;
+            overflow /*\**/: hidden \9;
+            width: 0;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+        }
+    }
+
+    .on {
+        color: nth($blue,1);
+        border: 2px solid nth($blue,1);
+        background: url('../Images/bg/check.jpg') no-repeat bottom right;
+    }
+
+    .leftfont {
+        display: inline-block;
+        font-size: 14px;
+        font-family: 'Microsoft YaHei';
+        width: 85px;
+        text-align: right;
+        margin-right: 10px;
+    }
+}
+
+.ui-vcheckbox {
+    label {
+        @include inline-block;
+        font-family: $baseSongTi;
+        font-size: 12px;
+        cursor: pointer;
+        background: url('../Images/bg/vnochreck.png') no-repeat center left;
+        padding: 4px 25px;
+    }
+
+    input {
+        display: none;
+        display /*\**/: inline-block \9;
+        overflow /*\**/: hidden \9;
+        width: 0;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+    }
+
+    .on {
+        background: url('../Images/bg/vchreck.png') no-repeat center left;
+    }
+    .disabled{
+        background: url('../Images/bg/dischreck.png') no-repeat center left;
+    }
+    .ondisabled{
+        background: url('../Images/bg/disnochreck.png') no-repeat center left;
+    }
+}
+
+//几种银行卡复选框
+%photoradio {
+    label {
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+//银行和18号字体卡号
+.t-cashradio {
+    label {
+        width:242px;
+        color: nth($black,2);
+        font-size: 16px;
+        font-family: $baseFontFamily;
+        padding:4px 15px;
+        margin:5px;
+        img {
+            width: 126px;
+            height: 40px;
+            margin-right: 10px;
+        }
+    }
+}
+//银行
+.t-normalradio {
+    @extend %photoradio;
+    label{
+        width:90px;
+        text-align:center;
+        margin:5px 11px;
+    }
+    
+}
+//银行标志和卡号
+.t-iconradio {
+    label {
+        color: nth($black,2);
+    }
+    img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+}
+//银行和持卡人详情
+.t-longradio {
+    @extend %photoradio;
+     line-height:16px;
+    label {
+        width:540px;
+        .name {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+}

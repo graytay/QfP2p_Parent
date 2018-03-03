@@ -1,0 +1,55 @@
+﻿@charset 'utf-8';
+//在线充值
+.m-account{
+    line-height:24px;
+    .account-addcard{
+        display:block;
+        border:1px solid nth($gery,3);
+        height:30px;
+        line-height:30px;
+        text-align:center;
+        margin:5px;
+        color:nth($blueAsh,2);
+        &:hover{
+           border:1px solid nth($blue,2);
+            color:nth($blue,2);
+        }
+    }
+    .input-big{
+        margin-left:20px;
+        .leftfont{
+            text-align:left;
+        }
+        .account-radiobox{
+            border:1px dashed nth($gery,2);
+            width:700px;
+            padding:10px;
+            label{
+                padding:2px 12px 2px 0;
+                margin:5px 15px 5px 11px;
+            }
+        }
+        .account-onlinebank{            
+            border-top:none 0;
+            width:700px;
+            padding:10px;
+            label{
+                padding:2px 12px 2px 0;
+                margin:5px 15px 5px 11px;
+            }
+        }
+        .ui-radio{
+                margin:0;
+            }
+    }
+    .ui-radio {
+        overflow:hidden;
+        margin-left:20px;
+        .leftfont{ 
+            text-align:left; 
+        }
+    } 
+       
+}
+
+

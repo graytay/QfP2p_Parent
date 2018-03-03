@@ -1,0 +1,15 @@
+1、数据库
+    --用户表登陆注册
+create table t_user(
+                    id int primary key auto)increment ,username varchar(20) unique  null,phonenum varchar(18)  ,email varchar(50) ,password varchar(50) ,recommendno varchar(20),flag int default 0,registerip varchar(30)not null,foreign key(recommendno) references t_recommend(no)
+                );
+  create table t_recommend(
+                 no varchar(20) primary key ,realname varchar(20) not null,phonenum varchar(18) not null
+            )
+        --日志表
+  create table t_log(
+                    id int primary key auto_increment,msg text not null,type int default 1,createtime datetime,ip varchar(30)
+
+                )
+
+2、项目架构

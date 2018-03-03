@@ -1,0 +1,18 @@
+﻿@charset 'utf-8';
+.m-finance{
+    width:100%;
+    th{
+        border-bottom:1px solid nth($gery,3);
+        text-align:left;
+        padding:5px 0 5px 10px;
+        font-size:20px;
+    }
+    td{
+       padding:10px;
+       border-bottom:1px dashed nth($gery,2);
+       text-align:center;
+        img{
+            width:50px;
+        }
+    }
+}

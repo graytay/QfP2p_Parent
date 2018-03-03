@@ -1,0 +1,58 @@
+﻿//关闭开启按钮
+.ui-toggle {
+    label {
+        position:relative;
+        display:block;
+        font-family: $baseSongTi;
+        font-size: 12px;
+        padding: 2px 3px;
+        cursor: pointer;
+        width:50px;
+        height:24px;
+        color: nth($baseColor,1);
+        @extend %radius3; 
+        background: nth($red,2);
+        input {
+            display: none;
+            display /*\**/: inline-block \9;
+            overflow /*\**/: hidden \9;
+            width: 0;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+        }
+    }
+    .toggle-text{
+       position:absolute;
+       top:5px;
+       display:block;
+       width:24px;
+       height:18px;
+       vertical-align:middle;
+    }
+    .toggle-btn{
+       position:absolute;
+       display:block;
+       top:2px;
+       @extend %radius3; 
+       width:24px;
+       height:24px;
+       background: nth($baseColor,1);
+       vertical-align:middle;
+      &:hover{
+          background: nth($red,1);
+       }
+    }
+
+.on{
+    background: nth($green,2);
+    .toggle-text{
+        color: nth($green,3);
+    }
+    .toggle-btn{
+      &:hover{
+          background: nth($green,3);
+       }
+    }
+}
+}

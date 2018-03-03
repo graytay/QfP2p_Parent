@@ -1,0 +1,326 @@
+﻿@charset 'utf-8';
+
+%scrollbar {
+    scrollbar-arrow-color: #888;
+    scrollbar-face-color: #eee;
+    scrollbar-3dlight-color: #fff;
+    scrollbar-highlight-color: #fff;
+    scrollbar-shadow-color: #ccc;
+    scrollbar-darkshadow-color: #fff;
+    scrollbar-track-color: #f1f1f1;
+    scrollbar-base-color: #f8f8f8;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.3);
+        border-radius: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #eee;
+        border-radius: 2px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+}
+
+.m-friendmsg {
+    margin: 0 10px;
+    overflow: hidden;
+
+    .friendmsg-left {
+        width: getWidth(3,false,30px);
+        float: left;
+
+        .friendmsg-tabs {
+            clear: both;
+            overflow: hidden;
+            margin-bottom: 5px;
+            zoom:1;
+            a {
+                display: block;
+                padding: 4px 5px;
+                border: 1px solid nth($blueAsh,1);
+                font-family: $baseSongTi;
+                font-size: 12px;
+                color: nth($blueAsh,3);
+
+                &:hover {
+                    border: 1px solid nth($blue,1);
+                    color: nth($blue,2);
+                }
+            }
+
+            .on {
+                background: nth($blue,1);
+                border: 1px solid nth($blue,3);
+                color: nth($baseColor,1);
+
+                &:hover {
+                    border: 1px solid nth($blue,3);
+                    background: nth($blue,2);
+                    color: nth($baseColor,1);
+                }
+            }
+        }
+
+        .friendmsg-friendlist {
+            border: 1px solid nth($gery,2);
+            overflow: hidden;
+            height: 538px;
+            position: relative;
+
+            ul {
+                overflow: hidden;
+                zoom:1;
+                li {
+                    float: left;
+                    position: relative;
+                }
+            }
+
+            dl {
+                height: 438px;
+                overflow: auto;
+                @extend %scrollbar;
+                dt{
+                    text-align:center;
+                    padding:10px 0;
+                    display:none;
+                }
+                dd {
+                    border-bottom: 1px solid nth($gery,2);
+
+                    &:hover {
+                        background: nth($gery,1);
+                    }
+                }
+            }
+
+
+            .friendmsg-system {
+                border-bottom: 1px solid nth($gery,2);
+            }
+
+            .friendmsg-img {
+
+                img {
+                    width: 34px;
+                    height: 34px;
+                    margin: 10px 5px;
+                }
+
+                .friendmsg-tip {
+                    position: absolute;
+                    font-size: 24px;
+                    top: -8px;
+                    right: -8px;
+                    color: nth($red,2);
+                }
+
+                .friendmsg-off {
+                    position: absolute;
+                    top: -4px;
+                    left: -1px;
+                    font-size: 14px;
+                    color: nth($red,2);
+                    display: none;
+
+                    &:hover {
+                        color: nth($red,3);
+                    }
+                }
+            }
+
+            .friendmsg-name {
+                @include ellipsis(115px);
+                padding: 15px 0;
+                margin-right:10px;
+                a {
+                    font-size: 16px;
+                    color: nth($black,2);
+
+                    &:hover {
+                        color: nth($blue,2);
+                    }
+                }
+            }
+
+            .friendmsg-oper {
+                @include ellipsis(60px);
+                padding: 9px 0;
+                text-align: right;
+                padding-right: 5px;
+
+                a {
+                    font-size: 12px;
+                    font-family: $baseSongTi;
+                    color: nth($gery,3);
+                    display: block;
+
+                    &:hover {
+                        color: nth($blue,2);
+                    }
+                }
+            }
+
+            .friendmsg-pager {
+                width: 100%;
+                background: lighten(nth($gery,1),3%);
+                position: absolute;
+                bottom: 0;
+
+                .pages {
+                    width: 100%;
+                    text-align: center;
+                    padding: 15px 0;
+
+                    a {
+                        border: 1px solid nth($blueAsh,1);
+                        background: nth($baseColor,1);
+                        padding: 5px 6px;
+                        color: nth($blueAsh,2);
+
+                        &:hover {
+                            background: nth($blue,1);
+                            border: 1px solid nth($blue,3);
+                            color: nth($baseColor,1);
+                        }
+                    }
+
+                    .one {
+                        padding: 5px 70px;
+                    }
+                }
+            }
+        }
+    }
+
+    .friendmsg-right {
+        width: getWidth(7,false,20px);
+        margin-top: 33px;
+        float: right;
+        border: 1px solid nth($gery,2);
+        height: 538px;
+        position: relative;
+
+        .friendmsg-lettersbox {
+            padding: 10px;
+            height: 368px;
+            overflow: auto;
+            @extend %scrollbar;
+
+            .friendmsg-goes, .friendmsg-issue {
+                clear: both;
+                width: 350px;
+                position: relative;
+                margin-bottom: 15px;
+
+                img {
+                    width: 34px;
+                    height: 34px;
+                    @include inline-block;
+                }
+
+                p {
+                    @include inline-block;
+                    -moz-border-radius: 6px;
+                    -webkit-border-radius: 6px;
+                    border-radius: 6px;
+                    width: 300px;
+                    padding: 4px 5px;
+                    text-align: left;
+                    position: relative;
+                    -ms-word-break: break-all;
+                    word-break: break-all;
+                    -ms-word-wrap: break-word;
+                    word-wrap: break-word;
+
+                    .friendmsg-delmsg {
+                        position: absolute;
+                        display: none;
+                        color: nth($blue,3);
+                        font-size: 16px;
+
+                        &:hover {
+                            color: nth($blue,2);
+                        }
+                    }
+                }
+            }
+
+            .friendmsg-goes {
+                img{
+                    float: left;
+                    margin-right: 5px;
+                }
+                p {
+                    background: lighten(nth($blueAsh,1),20%);
+
+                    .friendmsg-delmsg {
+                        top: -9px;
+                        right: -5px;
+                    }
+                }
+            }
+
+            .friendmsg-issue {
+                float: right;
+                text-align: right;
+
+                img {
+                    float: right;
+                    margin-left: 5px;
+                }
+
+                p {
+                    background: lighten(nth($blue,1),30%);
+
+                    .friendmsg-delmsg {
+                        top: -9px;
+                        left: -5px;
+                    }
+                }
+            }
+
+            .friendmsg-empty {
+                -moz-border-radius: 15px;
+                -webkit-border-radius: 15px;
+                border-radius: 15px;
+                background:lighten(nth($infoColor,2),5%);
+                color:nth($infoColor,3);
+                padding:4px 0;
+                width:300px;
+                margin:auto;
+                text-align:center;
+                margin-bottom:10px;
+                display:none;
+            }
+        }
+
+        .friendmsg-release {
+            position: absolute;
+            bottom: 0;
+            background: nth($gery,1);
+            width: 100%;
+            text-align: center;
+            padding: 5px;
+
+            textarea {
+                padding: 4px 5px;
+                border: 1px solid nth($gery,3);
+                height: 80px;
+            }
+
+            .friendmsg-reltip {
+                display: block;
+                text-align: right;
+                padding-right: 30px;
+                color: nth($blueAsh,1);
+            }
+        }
+    }
+}

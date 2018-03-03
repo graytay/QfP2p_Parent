@@ -1,0 +1,85 @@
+﻿@charset 'utf-8';
+
+.ui-loginmeun {
+    .loginmeun-titlebox {
+        border-bottom: 2px solid nth($gery,2);
+        padding:10px 10px;
+        font-size: 18px;
+        color: nth($black,3);
+        font-weight: bold;
+        a {
+            color:nth($green,3);
+            font-family: $baseSongTi;
+            font-size: 12px;
+            float: right;
+            font-weight:normal;
+            margin-top:2px;            
+        }
+    }
+
+    .loginmeun-formbox {
+        .text {
+            @extend %radius3;
+            width:getWidth(3);
+            padding: 7px 5px;           
+            border: 1px solid nth($Ash,3);
+            &:focus{
+          border: 1px solid nth($blue,2);
+          box-shadow: 0 0 5px #1F98C7;
+          filter:progid:dximagetransform.microsoft.shadow(color:#1F98C7,direction:170,strength:2);   
+            }
+        }
+
+        .loginmeun-input {
+            position: relative;
+            margin: 15px;
+            input {
+                padding-left: 35px;
+            }
+
+            i {              
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                *top: 1px;
+                background: nth($blue,2);
+                padding: 5px 8px;
+                color: nth($baseColor,1);
+                font-size: 17px;
+                -moz-border-radius: 3px 0 0 3px;
+                -webkit-border-radius: 3px 0 0 3px;
+                border-radius: 3px 0 0 3px;
+            }
+        }
+
+        .loginmeun-help {
+            margin: 10px 15px 5px 15px;
+            font-family: $baseSongTi;
+            font-size: 12px;
+            a {
+                padding-top:3px;
+                float: right;
+                color:nth($gery,3);
+                &:hover{
+                    color:nth($blue,2);
+                }
+            }
+        }
+
+        .loginmeun-oauth {
+            margin:5px 15px;
+            text-align:right;
+            color:nth($black,1);
+            a{
+                color:nth($black,1);
+                font-family:$baseSongTi;
+                font-size:12px;
+                &:hover{
+                    color:nth($blue,2);
+                }
+            }
+        }
+
+    }
+}

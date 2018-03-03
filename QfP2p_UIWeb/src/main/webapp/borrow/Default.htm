@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>借款列表 - 千锋教育</title>
+<link href="/Res/core/Styles/main.css?v=20151023175515" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    
+    <div class="m-warp m-bg">
+        <div class="m-body">
+            
+<div class="m-top">
+    <div class="m-container">
+  <div class="g-left wg7 mt5">
+    <span class="fcblueAsh-2">
+      欢迎致电： <span class="fs18 mr10">400 6058 823</span> 服务时间：9:00 - 18:00
+    </span>
+  </div>
+
+  <div class="g-right wgm5">
+    <ul class="top-topnav g-right js-topnav">
+      <li>
+        <a href="/Tool/Calculator.htm">工具箱</a>
+        <dl>
+          <dd>
+            <a href="/Tool/Calculator.htm">利息计算器</a>
+          </dd>
+          <dd>
+            <a href="/Tool/Risk.htm">抗风险能力测试</a>
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <a href="/Help/">帮助中心</a>
+      </li>
+      <li>
+        <a href="/News/" class="g-noneborder">关于我们</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<div class="m-head">
+    <div class="m-container pt10">
+        <div class="g-left wg4">
+            <h1 class="head-logo">
+            <a href="/">千峰教育</a>
+            </h1>
+        </div>
+        <div class="g-right wg8">            
+            <ul class="head-nav mt30">
+                <li class="ml25" style="display:inline;">
+                    <a href="/">首 页</a>
+                </li>
+                <li>
+                    <a href="/Borrow/">我要投资 <i class="iconfont">&#xe60b;</i></a>
+                    <dl class="m-shadow">
+                        <dt><a href="/Borrow/">投资列表</a></dt>
+                        <dt><a href="/Borrow/TransferList.htm">债权市场</a></dt>
+                        <dt><a href="/Finance/">智能投资</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <a href="/Loan/">我要借款 <i class="iconfont">&#xe60b;</i></a>
+                    <dl class="m-shadow">
+                        <dt><a href="/Loan/">快速申请</a></dt>
+                        <dt><a href="/Help/List.htm?cid=3">借款说明</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <a href="/Promotion/">最新活动 <i class="iconfont">&#xe60b;</i></a>
+                    <dl class="m-shadow">
+                        <dt><a href="/Promotion/">最新活动</a></dt>
+                        <dt><a href="/Shop/">积分商城</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <a href="/BBS/">社 区</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+            
+    <div class="m-page">
+        <form action="?action=search" class="js-filter search" method="get" id="form1" data-ajax-scroll="#form1" data-ajax-auto="false" data-ajax-fill="#js-ajaxlist" data-ajax-error="<div>加载中错误</div>">
+            <div class="m-container mt20 mb20">
+                <dl class="ui-tab m-select">
+                    <dt><a href="/Borrow/Default.htm" class="on">借款列表</a></dt>
+                    <dt><a href="/Borrow/TransferList.htm">债权列表</a></dt>
+                    
+                    <dd>                    
+                        <ul class="select-list mt25 ml30">
+                            <li>
+                                <strong>借款类型</strong>
+                                <a href="/Borrow/Default.htm" data-filter-to="#type" data-filter-value=""class="on">全 部</a>
+                                
+                                        <a href="/Borrow/Default.htm?type=2" data-filter-to="#type" data-filter-value="2">抵押标</a>
+                                    
+                                        <a href="/Borrow/Default.htm?type=1" data-filter-to="#type" data-filter-value="1">信用标</a>
+                                    
+                                        <a href="/Borrow/Default.htm?type=3" data-filter-to="#type" data-filter-value="3">净值标</a>
+                                    
+                                        <a href="/Borrow/Default.htm?type=4" data-filter-to="#type" data-filter-value="4">娱乐标</a>
+                                                                    
+                                <input type="hidden" name="type" id="type" value="" />
+                            </li>
+                            <li>
+                                <strong>年化利率</strong>
+                                <a href="/Borrow/Default.htm" data-filter-to="#rate" data-filter-value=""class="on">全 部</a>
+                                <a href="/Borrow/Default.htm?rate=-12" data-filter-to="#rate" data-filter-value="-12">12%以下</a>
+                                <a href="/Borrow/Default.htm?rate=12-14" data-filter-to="#rate" data-filter-value="12-14">12%-14%</a>
+                                <a href="/Borrow/Default.htm?rate=15-17" data-filter-to="#rate" data-filter-value="15-17">15%-17%</a>
+                                <a href="/Borrow/Default.htm?rate=18-" data-filter-to="#rate" data-filter-value="18-">18%以上</a>                                
+                                <input type="hidden" name="rate" id="rate" value="" />
+                            </li>
+                            <li>
+                                <strong>借款期限</strong>
+                                <a href="/Borrow/Default.htm" data-filter-to="#month" data-filter-value=""class="on">全 部</a>
+                                <a href="/Borrow/Default.htm?month=-1" data-filter-to="#month" data-filter-value="-1">一个月以内</a>
+                                <a href="/Borrow/Default.htm?month=1-3" data-filter-to="#month" data-filter-value="1-3">1-3个月</a>
+                                <a href="/Borrow/Default.htm?month=3-6" data-filter-to="#month" data-filter-value="3-6">3-6个月</a>
+                                <a href="/Borrow/Default.htm?month=6-" data-filter-to="#month" data-filter-value="6-">6个月以上</a>                                
+                                <input type="hidden" name="month" id="month" value="" />
+                            </li>
+                            <li>
+                                <strong>借款金额</strong>
+                                <a href="/Borrow/Default.htm" data-filter-to="#money" data-filter-value=""class="on">全 部</a>
+                                <a href="/Borrow/Default.htm?money=-5" data-filter-to="#money" data-filter-value="-5">5万以下</a>
+                                <a href="/Borrow/Default.htm?money=5-10" data-filter-to="#money" data-filter-value="5-10">5-10万</a>
+                                <a href="/Borrow/Default.htm?money=10-15" data-filter-to="#money" data-filter-value="10-15">10-15万</a>
+                                <a href="/Borrow/Default.htm?money=15-" data-filter-to="#money" data-filter-value="15-">15万以上</a>                                
+                                <input type="hidden" name="money" id="money" value="" />
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <input type="hidden" name="order" id="order" value="" />
+                <dl class="m-bidlist mt10">
+                    <dt><a href="/Borrow/Default.htm?order=_asc" data-filter-to="#order|#order" data-filter-value="|_desc"class="on">按时间排序</a></dt>
+                    <dt><a href="/Borrow/Default.htm?order=money" data-filter-to="#order|#order" data-filter-value="money|money_desc">按金额排序</a></dt>                    
+                    <dd id="js-ajaxlist" class="js-ajaxlist">
+                        
+                            
+                                    <div class="m-bidbox" id="tr5">
+                                        <div class="bidbox-title">
+                                            <h5 class="g-left">
+                                                <a href="/Borrow/Detail.htm?id=nAC5ZQIZZO0bEAjTn5me-Q=="><img src="/Upload/201506/69fc98b9-84f4-4cb1-8787-0b43f2ee5662.png" style="width:60px; height:18px; margin-top:2px;" class="g-left" /></a>
+                                                <a class="g-left fs16 ml10 g-valign" style="color:#1b1b1b" href="/Borrow/Detail.htm?id=nAC5ZQIZZO0bEAjTn5me-Q==">投资测试2</a>
+                                                                                                
+                                                
+                                                
+                                            </h5>
+                                            <div class="bidbox-time g-right js-time"></div>
+                                        </div>
+                                        <ul>
+                                            <li class="wg3">
+                                                <label class="fcblue-3 g-fbold fs26">300,000.00</label> 元 
+                                            </li>
+                                            <li class="border"></li>
+                                            <li class="wg2">
+                                                <label>8%</label>
+                                                <span>年化率</span>
+                                            </li>
+                                            <li class="border"></li>
+                                            <li class="wg2">
+                                                <label>3</label>月
+                                                <span>借款期限</span>
+                                            </li>
+                                            <li class="wg3">
+                                                <div class="ui-bidspeed g-fleft"><span class="js-stepw" style="width:0%"></span></div>
+                                                <div class="ui-percent"><span class="js-stepl" style="left:0%;">0%</span></div>
+                                            </li>
+                                            <li>                                                
+                                                <a href="/Borrow/Detail.htm?id=nAC5ZQIZZO0bEAjTn5me-Q==" class="w100 btn-nobord g-block js-btn"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                
+                                    <div class="m-bidbox" id="tr4">
+                                        <div class="bidbox-title">
+                                            <h5 class="g-left">
+                                                <a href="/Borrow/Detail.htm?id=xuVVBOCYxSHeDdTsvjPeMg=="><img src="/Upload/201506/ac6d7658-8d40-477b-9f6e-6e2158da39b1.png" style="width:60px; height:18px; margin-top:2px;" class="g-left" /></a>
+                                                <a class="g-left fs16 ml10 g-valign" style="color:#1b1b1b" href="/Borrow/Detail.htm?id=xuVVBOCYxSHeDdTsvjPeMg==">信用标01</a>
+                                                                                                
+                                                
+                                                <i class="iconfont fs20 fcred-3" title="投标奖励">&#xe647;</i>
+                                            </h5>
+                                            <div class="bidbox-time g-right js-time"></div>
+                                        </div>
+                                        <ul>
+                                            <li class="wg3">
+                                                <label class="fcblue-3 g-fbold fs26">30,000.00</label> 元 
+                                            </li>
+                                            <li class="border"></li>
+                                            <li class="wg2">
+                                                <label>8% + 1%</label>
+                                                <span>年化率</span>
+                                            </li>
+                                            <li class="border"></li>
+                                            <li class="wg2">
+                                                <label>6</label>月
+                                                <span>借款期限</span>
+                                            </li>
+                                            <li class="wg3">
+                                                <div class="ui-bidspeed g-fleft"><span class="js-stepw" style="width:0%"></span></div>
+                                                <div class="ui-percent"><span class="js-stepl" style="left:0%;">0%</span></div>
+                                            </li>
+                                            <li>                                                
+                                                <a href="/Borrow/Detail.htm?id=xuVVBOCYxSHeDdTsvjPeMg==" class="w100 btn-nobord g-block js-btn"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                
+                                    <div class="m-bidbox" id="tr3">
+                                        <div class="bidbox-title">
+                                            <h5 class="g-left">
+                                                <a href="/Borrow/Detail.htm?id=FuUj3RZ7bSyQZu2nldzd1w=="><img src="/Upload/201506/69fc98b9-84f4-4cb1-8787-0b43f2ee5662.png" style="width:60px; height:18px; margin-top:2px;" class="g-left" /></a>
+                                                <a class="g-left fs16 ml10 g-valign" style="color:#1b1b1b" href="/Borrow/Detail.htm?id=FuUj3RZ7bSyQZu2nldzd1w==">抵押标1</a>
+                                                                                                
+                                                
+                                                
+                                            </h5>
+                                            <div class="bidbox-time g-right js-time"></div>
+                                        </div>
+                                        <ul>
+                                            <li class="wg3">
+                                                <label class="fcblue-3 g-fbold fs26">300,000.00</label> 元 
+                                            </li>
+                                            <li class="border"></li>
+                                            <li class="wg2">
+                                                <label>8%</label>
+                                                <span>年化率</span>
+                                            </li>
+                                            <li class="border"></li>
+                                            <li class="wg2">
+                                                <label>6</label>月
+                                                <span>借款期限</span>
+                                            </li>
+                                            <li class="wg3">
+                                                <div class="ui-bidspeed g-fleft"><span class="js-stepw" style="width:0%"></span></div>
+                                                <div class="ui-percent"><span class="js-stepl" style="left:0%;">0%</span></div>
+                                            </li>
+                                            <li>                                                
+                                                <a href="/Borrow/Detail.htm?id=FuUj3RZ7bSyQZu2nldzd1w==" class="w100 btn-nobord g-block js-btn"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                
+                            <div class="ui-pages g-fright">
+                                <div class="pages"><span class="remind">共找到<strong>3</strong>条记录</span><span class="disabled">< 上一页</span><span class="current">1</span><span class="disabled">下一页 ></span></div>
+                                <a href="/Borrow/Default.htm" class="g-hide"></a>
+                            </div>
+                            <script type="text/html" class="js-run">
+                                $.ajax({
+                                    dataType: 'json',
+                                    cache: false,
+                                    url: 'ajax.htm',
+                                    data: { action: 'borrowsInfo', ids: '5,4,3'},
+                                    success: function(res) {                              
+                                        if (res.length) {
+                                            $.each(res, function(i, n) {
+                                                var tr = $('#tr' + n.id);                                
+                                                tr.find('.js-stepw').css('width', n.data.step);
+                                                tr.find('.js-stepl').css('left', n.data.step).html(n.data.step);
+                                                tr.find('.js-btn').html(n.data.btnTxt).addClass(n.data.btnHigh ? 'bidbtn' : 'bid-finish');
+                                                commonUi.timedown(tr.find('.js-time'), n.data.time);
+                                            });
+                                        }
+                                    }
+                                });
+                            </script>
+                        
+                    </dd>
+                </dl>
+            </div>
+        </form>
+    </div>
+
+        </div>
+        
+<div class="m-footer footer-big">
+    <div class="m-container footer-bline">
+  <div class="footer-left">
+    <div class="footer-logo"></div>
+    <div class="footer-workinfo">
+      <p>
+        服务热线：<span>工作时间（09:00-18:00）</span>
+      </p>
+      <p>
+        <strong>400 6058 823</strong>
+      </p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <dl>
+      <dt>
+        <a href="/Help/">使用帮助</a>
+      </dt>
+      <dd>
+        <a href="/User/Register.htm" class="ml10">立即注册</a>
+      </dd>
+      <dd>
+        <a href="/Help/List.htm?cid=1" class="ml10">如何投资</a>
+      </dd>
+      <dd>
+        <a href="/Help/List.htm?cid=3" class="ml10">如何借款</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        <a href="/News/">关于我们</a>
+      </dt>
+      <dd>
+        <a href="/News/?id=4" class="ml10">公司简介</a>
+      </dd>
+      <dd>
+        <a href="/News/?id=5" class="ml10">法律顾问</a>
+      </dd>
+      <dd>
+        <a href="/News/?id=1" class="ml10">联系我们</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        <a href="/Help/List.htm?cid=4">安全保障</a>
+      </dt>
+      <dd>
+        <a href="/Help/List.htm?cid=24" class="ml10">本息保障</a>
+      </dd>
+      <dd>
+        <a href="/Help/List.htm?cid=25" class="ml10">政策法规</a>
+      </dd>
+      <dd>
+        <a href="/Help/List.htm?cid=27" class="ml10">隐私保护</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        <a href="/Help/">了解更多</a>
+      </dt>
+      <dd>
+        <a href="/Help/" class="ml10">常见问题</a>
+      </dd>
+      <dd>
+        <a href="/Help/ServiceList.htm" class="ml10">联系客服</a>
+      </dd>
+      <dd>
+        <a href="/Help/List.htm?cid=7" class="ml10">资费说明</a>
+      </dd>
+    </dl>
+    <div class="footer-code">
+      <img src="/res/core/Images/default/Twocode.png" />
+    </div>
+  </div>
+</div>
+<div class="m-container footer-copyinfo pa10">
+  &copy; 版权所有 All Rights Reserved | <a rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action">这里是备案号</a>
+</div>
+
+
+</div>
+
+        <div><a href="http://www.hjwis.com/" target="_blank">本系统由慧聚天下网络科提供，P2P网贷系统免费版</a></div>
+    </div>
+    
+<div id="js-floatMenu" class="ui-floatmenu" style="display:none; z-index:3000;">
+    <div class="floatmenu-showbox">
+        <a href="#float-kefu" class="iconfont c-warningColor float-btn" title="在线客服">&#xe64a;</a>
+        <div id="float-kefu" class="t-kefu" style="display:none;">
+            <ul>
+                                
+            </ul>
+        </div>
+    </div>
+    <div class="floatmenu-showbox">
+        <a href="/Tool/Calculator.htm" class="iconfont c-errorColor float-btn" title="理财计算器" target="_blank">&#xe64c;</a>
+    </div>
+    <div class="floatmenu-showbox">
+        <a href="javascript:void(0)" class="iconfont c-successColor float-btn" title="意见反馈" onclick="return member.guestBook();">&#xe64d;</a>
+    </div>
+        
+    <div class="floatmenu-showbox floatmenu-top"  title="回到顶部" style="display:none;" onclick="ui.scroll(0);">
+        <a href="javascript:void(0)" class="iconfont c-infoColor float-btn">&#xe64b;</a>
+    </div>
+</div>
+
+    <script src="/res/core/scripts/jquery.js?v=20150624215102"></script>
+    <script src="/res/core/scripts/core.js?v=20151225173543"></script>
+    <script>var gconfig = { siteName: '千峰教育', pageExt: '.htm' };</script>
+    <script src="/res/core/scripts/main.js?v=20151104153540"></script>   
+    
+    
+    <script src="/res/core/scripts/jquery.cycle2.js?v=20150624215102"></script>
+    
+    <script>
+        eval($('script.js-run')[0].innerHTML);
+    </script>
+
+
+<!--[if lte IE 6]> 
+    <script src="/res/core/scripts/DD_belatedPNG.js?v=20150624215102"></script> 
+    <script type="text/javascript"> 
+        DD_belatedPNG.fix('.head-logo,.footer-logo'); 
+    </script> 
+<![endif]--> 
+</body>
+</html>

@@ -1,0 +1,183 @@
+﻿@charset 'utf-8';
+//文字在上面输入框下间距是10px的表单
+.form-normal{
+    .input-big{
+        margin-bottom:10px;
+    }
+    .ui-radio{
+        margin-bottom:10px;
+    }    
+}
+//输入框下间距是20px的表单
+.form-big{   
+    .input-big{
+        margin-bottom:20px;
+    } 
+     .ui-radio{
+        margin-bottom:20px;
+    }  
+}
+
+//动态装入JSON表单样式重写
+.m-jsonfrom{
+    border-top:1px dashed nth($gery,2);
+    tr{
+        border-bottom:1px dashed nth($gery,2);
+    }
+    th{
+        width:20%;
+        height:45px;
+        font-weight:normal;
+        text-align:right;
+        padding-right:15px;
+    }
+    td{
+        padding:7px 5px;
+        input{
+            @extend %radius3;
+            padding: 9px 25px 9px 7px;
+            border: 1px solid nth($gery,3);  
+            &:focus{
+                border: 1px solid nth($blue,1);
+            }          
+        }
+        select{
+            @extend %radius3;
+            padding:9px 7px;
+            margin:5px 5px 5px 0;
+            border: 1px solid nth($gery,3);  
+            &:focus{
+                border: 1px solid nth($blue,1);
+            }  
+        }
+        textarea{
+            @extend %radius3;
+            width:95%;
+            height:90px;
+            padding:9px 7px;
+            border: 1px solid nth($gery,3);  
+            &:focus{
+                border: 1px solid nth($blue,1);
+            }  
+        }
+        .ui-radio{
+         margin-left: 0;
+         margin-bottom:0; 
+         input{
+             margin:0;
+             padding:0;
+             border:0 none;
+         }
+        } 
+        .ui-checkbox{
+         input{
+             margin:0;
+             padding:0;
+             border:0 none;
+         }
+        } 
+        .ui-imageupload{}
+        .ui-fileupload {}
+        .uploadify-button{
+            @extend %radius3;
+        }
+        .ui-imageuploadmulti {
+            a{
+                float:left;
+                border:1px solid nth($gery,3);
+                padding:2px;
+                margin-right:10px;
+                margin-bottom:5px;
+                position:relative;
+                &:hover{border-color:nth($blue,2);}
+                i {
+                    cursor:pointer;
+                    position:absolute;
+                    right:0;
+                    top:0; 
+                    display:block;
+                    width:16px;
+                    height:16px;
+                    color:nth($blue,2);
+                    z-index:1;
+                    margin:-4px -1px 0 0;
+                    &:hover{
+                        color:nth($blue,3);
+                    }
+        }
+    }
+    clear:both;
+    overflow:hidden;
+    zoom:1;
+}
+        .ui-fileuploadmulti {
+            a{
+                float:left;
+                border:1px solid #ddd;
+                padding:6px 20px;
+                margin-right:10px;
+                margin-bottom: 5px;
+                position:relative;
+                &:hover{
+                    border-color:#ccc;
+                }
+
+        i {
+            cursor:pointer;
+            position:absolute;
+            right:0;
+            top:0; 
+            display:block;
+            width:16px;
+            height:16px;
+            color:#dadada;
+            z-index:1;
+            margin:-4px -1px 0 0;
+            &:hover{
+                color:nth($gery,3);
+            }
+        }
+    }   
+
+    clear:both;
+    overflow:hidden;
+    zoom:1;
+}
+        .ui-customuploads {
+            overflow:hidden;
+            img{
+                width:0;
+            }
+}
+        .customuploads-new{
+            overflow:hidden;
+            .customuploads-col{
+                width:30%;
+                float:left;
+                margin:5px;
+                a{
+                   margin:10px 0;
+                   border:2px solid nth($blueAsh,1);
+                   display:block;
+                   overflow:hidden;
+                   &:hover{
+                     border:2px solid nth($blue,1);
+                   }
+                }
+            }
+        }
+
+        .prompt{
+           margin-left:0;
+        }
+        .t-money{
+              position: absolute;
+              top: 0;
+              right: 0;
+              color: #c8c8c8;
+              font-size: 12px;
+              font-family: arial, sans-serif;
+              padding: 9px 7px 0 0;
+        }
+    }
+}

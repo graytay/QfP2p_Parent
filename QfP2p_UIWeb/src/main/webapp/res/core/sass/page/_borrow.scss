@@ -1,0 +1,458 @@
+﻿@charset 'utf-8';
+//投标首页
+//借款列表 条件筛选
+.m-select {
+    dd {
+        overflow: hidden;
+        padding: 0;
+        .select-list {
+            li {
+                height: 35px;
+                font-size: 14px;
+                margin-bottom:10px;
+                strong, a {
+                    display: inline-block;
+                    padding: 3px 10px;
+                }
+
+                a {
+                    @extend %radius3;
+                    color: nth($black,1);
+                    margin-left: 10px;
+
+                    &:hover {
+                        background: nth($green,2);
+                    }
+                }
+
+                .on {
+                    background: nth($blue,2);
+                    color: #fff;
+                }
+            }
+        }
+
+        .select-newhand {
+            width: getWidth(3,flase,-20px);
+            padding-bottom:10px;
+        }
+    }
+}
+
+.m-bidlist {
+    background: #fff;
+    border: 1px solid nth($gery,2);
+    overflow: hidden;
+
+    dt {
+        width: (getWidth(12,flase)-2px)/4;
+        float: left;
+
+        a {
+            display: block;
+            line-height: 45px;
+            text-align: center;
+            color: nth($black,1);
+
+            &:hover {
+                background: nth($blue,1);
+                color: #fff;
+            }
+        }
+
+        .on {
+            background: nth($blue,2);
+            color: #fff;
+        }
+    }
+
+    dd {
+        border-top: 1px solid nth($gery,2);
+        clear: both;
+    }
+
+    .bidlist-empty {
+        margin: auto;
+        display: block;
+        text-align: center;
+        margin-top: 24px;
+    }
+}
+
+
+
+
+
+.m-bidbox{
+    padding: 15px 20px 0 20px;
+
+    .bidbox-title {
+        height: 22px;
+        .bidbox-time span{
+            color:nth($blue,3);
+        }
+    }
+
+    h5 {
+        height: 22px;
+        line-height: 22px;
+
+        span {
+            margin: 0 5px;
+        }
+    }
+
+    ul {
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed nth($gery,2);
+        margin-top: 10px;
+
+        li {
+            color: nth($blueAsh,3);
+            text-align: center;
+            float: left;
+
+            span {
+                display: block;
+            }
+
+            label {
+                color: nth($blue,2);
+                font-size: 18px;
+            }
+        }
+
+        .border {
+            height: 30px;
+            background: nth($gery,3);
+            width: 1px;
+            margin: 10px 0;
+        }
+    }
+}
+//投标进度条
+.ui-bidspeed {
+    @extend %radius6;
+    width: 200px;
+    height: 12px;
+    overflow: hidden;
+    background: url('../Images/bg/bidspeed01.png') repeat-x #eaebee;
+    margin-left:16px;
+    span {
+        @extend %radius6;
+        display:block;
+        background: url('../Images/bg/speedbg01.gif');
+        height: 100%;
+    }
+}
+//投标进度百分比
+.ui-percent {
+    position: relative;
+    width: 196px;
+    height: 23px;
+    margin-right:16px;
+    span {
+        width: 37px;
+        height: 23px;
+        line-height: 30px;
+        color: nth($black,2);
+        font-size: 10px;
+        font-family: $baseSongTi;
+        position: absolute;
+        text-align:center;
+        background: url('../Images/bg/speedbg.png') no-repeat;
+    }
+}
+
+
+//投标按钮
+.bidbtn { 
+    color:nth($baseColor,1);
+    background:nth($blue,1);
+    border:1px solid nth($blue,2);
+    &:hover {       
+        color:nth($baseColor,1);
+        background:nth($blue,2);
+        border:1px solid nth($blue,3);
+    }
+}
+//标满按钮
+.bid-finish {
+    background: nth($gery,1);
+    color: nth($black,3);
+    border:1px solid nth($gery,3);
+
+    &:hover {
+        background: nth($gery,2);
+        color: nth($black,3);
+        border:1px solid nth($gery,3);
+    }
+}
+
+
+//投标详情页
+.m-detailbid {
+    .darailbid-title{
+        height: 20px;
+        line-height: 20px;
+        border-bottom:1px solid nth($gery,2);
+        .title-time span{
+            font-size:16px;
+            color:nth($blue,3);
+        }
+    }
+
+    .darailbid-baselist{
+        height:116px;
+        border-bottom:1px solid nth($gery,1);
+        li{
+            height:116px;
+            float:left;
+            position:relative;
+            border-left:1px dotted nth($gery,3);
+            text-align:center;
+            %t-tfl{
+                display:block;
+                position:absolute;
+            }
+            .t-tl175{
+                @extend %t-tfl;
+                top:30px;
+                left:getWidth(2,true,20);
+            }
+            .t-tl108{
+                @extend %t-tfl;
+                top:0;
+                left:getWidth(1,true,20);
+                text-align:right;
+                width:getWidth(1);
+            }
+            .t-tt175{
+                @extend %t-tfl;
+                top:47px;
+                left:getWidth(2,true,20);
+            }
+            .t-tl185{
+                @extend %t-tfl;
+                height:45px;
+                top:47px;
+                left:getWidth(3,true,40);
+            }
+            .darailbid-ratelist{
+                position:absolute;
+                @extend %radius3;
+                display:none;
+                top:22px;
+                left:0;
+                color:nth($infoColor,1);
+                background:nth($infoColor,2);
+                border:1px solid nth($infoColor,3);
+                padding:5px 15px;
+                dd{
+                    white-space:nowrap;
+                    text-align:left;
+                }
+            }
+        }
+    }
+
+    .darailbid-box{
+        border-top:1px solid nth($gery,1);
+        padding:10px 15px;
+        overflow:hidden;
+        *height:170px;
+        .detailbid-photo{
+            padding:5px;
+            border:1px solid nth($gery,2);
+            img{
+                width:getWidth(3);
+            }
+        }
+        .darailbid-list{
+             width:getWidth(6,false,50);
+            li{
+                float:left;
+                padding:10px 0;
+                width:getWidth(3,false,25);
+            }
+            .m-bidOther{
+                width:100%;
+                span{
+                    @include inline-block;
+                    padding:0 5px;
+                    font-family:$baseSongTi; 
+                    font-size:12px;
+                    color:nth($blueAsh,2);
+                }
+            }
+        }
+    }
+
+    //会员投资区域控制
+    .detailbid-usermoenytext{
+        margin-top:10px;
+        width:97%;
+        height:30px;
+        line-height:30px;
+        overflow:hidden;
+        
+    }
+    .detailbid-usermoeny{
+        width:97%;
+        margin-top:10px;
+        text-align:center;
+        height:30px;
+        line-height:30px;
+    }
+    .detailbid-userbidinput{
+        @extend %radius3;
+        padding: 9.5px 25px 9.5px 7px;
+        border: 1px solid nth($blueAsh,1); 
+        margin-top:10px;
+        &:focus{
+          border: 1px solid nth($blue,2);
+          box-shadow: 0 0 5px #1F98C7;
+          filter:progid:dximagetransform.microsoft.shadow(color:#1F98C7,direction:170,strength:2);   
+        }
+        .disable{
+            background:nth($gery,1);
+        }
+    }
+    .detailbid-userbidlist{
+        width:97%;
+        margin-top:10px;
+        li{
+            margin-bottom:5px;
+            margin-left:3px;
+        }
+    }
+    .detailbid-userhelpline{
+        position:absolute;
+        display:block;
+        right:10px;
+        bottom:0;
+        font-size:12px;
+        height:30px;
+        line-height:30px;
+        
+    }
+}
+//
+.detailbid-borrowtab{
+    dd{
+        width:getWidth(12,true,42);
+    }
+}
+//投标详情Tab
+.detailbid-table{
+    width:100%;
+    border:1px solid nth($gery,2);
+    th{
+        padding:10px;
+        font-size:16px;
+        border:1px solid nth($gery,2);
+        background:nth($blueAsh,3);
+        color:nth($gery,2);
+        white-space:nowrap;
+    }
+    td{
+       text-align:center;
+       padding:10px;
+       border:1px solid nth($gery,2);
+       white-space:nowrap;
+    }
+    .alt{
+      background:nth($gery,1);
+    }
+}
+
+
+//描述类信息包装
+.detailbid-baseinfobox{
+    .baseinfo-titile{
+        padding:10px;
+        font-size:18px;
+        border-bottom:2px solid nth($gery,2);        
+    }
+    .baseinfo-detail{
+        padding:10px;
+        color:nth($black,3);
+    }
+    .baseinfo-table{
+        width:100%;
+        border:2px solid nth($baseColor,1);
+        background:lighten(nth($infoColor,2),8%);
+        color:nth($infoColor,1);
+        @extend %radius3;
+        th,td{
+            border:2px solid nth($baseColor,1);
+            padding:10px 5px;
+        }
+        th{
+            width:40%;
+            white-space:nowrap;
+            color: nth($baseColor,1);
+            background:nth($blue,1);
+        }
+        td{
+            text-align:center;
+        }
+        .alt{
+            background:nth($infoColor,2);
+        }
+    }
+}
+
+
+//投标详情box
+.detailbid-infobox{
+    padding:10px;
+    .detailbid-infotitle{
+        font-size:18px;
+        font-weight:bold;
+        color:nth($black,1);
+        margin-bottom:10px;
+    }
+    .detailbid-infotable{
+        width:100%;
+        th,td{
+            border:1px solid nth($gery,3);
+            padding:10px 5px;
+        }
+        th{
+            width:169px;
+            background:nth($gery,1);
+        }
+        td{
+            width:30%;
+        }
+    }
+}
+
+
+
+
+%icons{
+    @include inline-block;
+    width:65px;
+    height:20px;
+    margin-left:5px;
+}
+.icon-None{
+
+}
+.icon-Principal{
+    @extend %icons;
+    background: url('../Images/default/icon-benj.png') no-repeat center center;   
+}
+.icon-PrincipalInterest{
+     @extend %icons;
+     background: url('../Images/default/icon-benb.png') no-repeat center center;   
+}
+.icon-Full{
+    @extend %icons;
+    background: url('../Images/default/icon-quane.png') no-repeat center center;
+}
+

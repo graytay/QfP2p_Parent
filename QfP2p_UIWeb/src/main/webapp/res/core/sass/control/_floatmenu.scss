@@ -1,0 +1,69 @@
+﻿@charset 'utf-8';
+.ui-floatmenu{
+    .floatmenu-showbox{
+        .float-btn{
+         font-size:30px;
+         padding:3px;
+        }
+        .t-kefu{
+            border:1px solid nth($Ash,1);
+            background:nth($baseColor,1);
+            position: absolute;
+            right: 42px;
+            top: 2px;
+            li{
+                a{
+                    height:45px;
+                    display:block;
+                    padding:5px 15px;
+                    color:nth($black,2);
+                    &:hover{
+                     background: nth($warningColor,2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.c-warningColor{
+        color: nth($infoColor,1);
+        background: nth($infoColor,2);
+        border:2px solid  nth($infoColor,3);
+    &:hover {
+        color: nth($warningColor,1);
+        background: nth($warningColor,2);
+        border-color: nth($warningColor,3);
+    }
+}
+.c-errorColor{
+        color: nth($infoColor,1);
+        background: nth($infoColor,2);
+        border:2px solid  nth($infoColor,3);
+    &:hover {
+        color: nth($errorColor,1);
+        background: nth($errorColor,2);
+        border-color: nth($errorColor,3);
+    }
+}
+.c-successColor{
+        color: nth($infoColor,1);
+        background: nth($infoColor,2);
+        border:2px solid  nth($infoColor,3);
+    &:hover {
+        color: nth($successColor,1);
+        background: nth($successColor,2);
+        border-color: nth($successColor,3);
+    }
+}
+.c-infoColor{
+        color: nth($infoColor,1);
+        background: nth($infoColor,2);
+        border:2px solid  nth($infoColor,3);
+    &:hover {
+        color: nth($infoColor,1);
+        background: nth($infoColor,2);
+        border-color: nth($infoColor,3);
+    }
+} 

@@ -1,0 +1,83 @@
+﻿@charset 'utf-8';
+%radius3{
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+}
+%radius5{
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+%radius6{
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+}
+
+.btn-bbord{
+    @extend %radius3;   
+    height:40px;   
+    border:0;
+    border-bottom:3px solid;
+    cursor:pointer;
+    &:hover{
+        border:0;
+        border-top:3px solid;
+    }
+}
+.btn-bbordsmall{
+    @extend %radius3;
+    text-align:center;
+    height:32px;
+    line-height:32px;
+    border:0;
+    border-bottom:3px solid;
+    cursor:pointer;
+    &:hover{
+        border:0;
+        border-top:3px solid;
+    }
+}
+.btn-nobord{
+    @extend %radius3;
+    padding: 0 17px;
+    border:none;
+    height:35px;
+    line-height:35px;
+    text-align:center;
+    cursor:pointer;
+}
+
+
+.btn-nobordbig{
+    @extend %radius3;
+    padding: 0 20px;
+    border:none;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.btn-bordsmall{
+    border:1px solid;
+    padding: 0 18px;
+    height:28px;
+    line-height:28px;
+    text-align:center;
+}
+
+.btn-bordmini{
+    border:1px solid;
+    padding: 0 5px;
+    text-align:center;
+}
+
+.btn-submits{
+    
+}
+
+
+
+

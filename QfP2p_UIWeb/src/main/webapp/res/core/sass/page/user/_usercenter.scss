@@ -1,0 +1,209 @@
+﻿@charset 'utf-8';
+//用户个人中心首页
+
+//个人中心首页第一块用户信息
+.usercenter-infor {
+    height: 205px;
+    border-bottom: 1px solid nth($gery,2);
+}
+//个人中心首页第一块左边
+.usercenter-left {
+    width: getWidth(7,flase);
+    float: left;
+
+    .usercenter-container {
+        height: 135px;
+        margin: 20px 0 0 20px;
+
+        .usercenter-photo {
+            width: 90px;
+            height: 90px;
+            border: 1px solid nth($gery,2);
+            padding: 5px;
+            position: relative;
+            float: left;
+            margin-right: 10px;
+
+            img {
+                width: 90px;
+                height: 90px;
+            }
+
+            .usercenter-imglink {
+                display: block;
+                position: absolute;
+                left: 5px;
+                top: 5px;
+                padding: 0;
+                width: 90px;
+                height: 90px;
+                -moz-border-radius: 0;
+                -webkit-border-radius: 0;
+                border-radius: 0;
+                border: 0 none;
+                line-height: 90px;
+                text-align: center;
+                text-indent: -9999px;
+                background: none;
+                font-size: 12px;
+
+                &:hover {
+                    text-indent: 0;
+                    @include bgcolor-alpha;
+                }
+            }
+
+            span {
+                display: block;
+                margin-top: 10px;
+                font-family: $baseSongTi;
+                font-size: 12px;
+                text-align: center;
+                color: nth($black,1);
+            }
+        }
+
+        .usercenter-info {
+            float: left;
+            margin-left: 10px;
+
+            h4 {
+                font-size: 24px;
+                color: nth($black,3);
+
+                span {
+                    font-size: 14px;
+                    color: nth($black,2);
+                }
+            }
+
+            h5 {
+                line-height: 30px;
+                font-size: 16px;
+
+                a {
+                    font-size: 12px;
+                    margin-left: 20px;
+                    font-family: $baseSongTi;
+                }
+            }
+
+            p {
+                display: block;
+                text-align: left;
+                font-family: $baseSongTi;
+                font-size: 12px;
+                margin-bottom: 5px;
+
+                i, a {
+                    margin-right: 10px;
+                }
+
+                i {
+                    cursor: default;
+                }
+            }
+
+            .icons-p {
+                *margin-top: 10px;
+                line-height: 34px;
+            }
+        }
+    }
+}
+
+.usercenter-money {
+    width: 100%;
+    border-top: 1px dashed nth($gery,2);
+
+    ul {
+        width: 33%;
+        float: left;
+
+        li {
+            padding-left: 20px;
+
+            strong {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .usercenter-border {
+        border-left: 1px dashed nth($gery,2);
+        border-right: 1px dashed nth($gery,2);
+    }
+}
+
+
+//个人中心首页第一块右边
+.usercenter-right {
+    width: getWidth(2,flase);
+    float: right;
+    font-size: 12px;
+    font-family: $baseSongTi;
+
+    .custom-service {
+        height: 156px;
+        color: #fff;
+        background: nth($blue,1);
+        text-align: center;
+
+        i {
+            line-height: 100px;
+        }
+
+        span {
+            display: block;
+            a {
+                color: nth($baseColor,1);
+
+                &:hover {
+                    color: nth($blue,3);
+                }
+            }
+        }
+    }
+
+    .money-service {
+        background: lighten(nth($gery,1),2%);
+        height: 50px;
+
+        a {
+            display: inline-block;
+            margin: 10px 0 0 10px;
+            *margin: 10px 0 0 5px;
+        }
+    }
+}
+//个人中心首页第二块内容账户资金
+.usercenter-table {
+    margin: 30px 0;
+
+    tr {
+        th {
+            font-weight: normal;
+            text-align: center;
+        }
+
+        td {
+            span {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            strong {
+                font-size: 24px;
+                margin: 10px;
+            }
+
+            text-align: center;
+        }
+    }
+}
+//个人中心首页第三块内容理财情况
+.usercenter-mdetail {
+    border-top: 1px solid nth($gery,2);
+    padding: 20px;
+    overflow: hidden;
+}

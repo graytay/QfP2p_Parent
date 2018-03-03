@@ -1,0 +1,58 @@
+﻿@charset 'utf-8';
+//首页banner部分
+.m-banner {
+    height: 380px;
+    overflow:hidden;
+
+    .banner-img {
+        height: 380px;
+        display: block;
+        width: 100%;
+        min-width:getWdith(12);
+        z-index: 0;
+    }
+
+    .cycle-pager {
+        position: absolute;
+        bottom: 25px;
+        left: 44%;
+        z-index: 600;
+        span {
+            @include inline-block;
+            width: getWidth(1,ture,30);
+            height: 6px;
+            background: nth($gery,1);
+            margin-right: 5px;
+            font-size:0;
+            cursor: pointer;
+        }
+
+        .cycle-pager-active {
+            background: nth($blue,1);
+        }
+    }
+    
+    %changeImg{
+        position: absolute;
+        top: 45%;
+        z-index:500;
+        font-size:55px;
+        cursor: pointer;
+        color:nth($baseColor,1);
+        opacity:0.2;
+        &:hover{
+            opacity:0.8;
+        }
+}
+
+    .cycle-next {
+        @extend %changeImg;
+        right: 15%;
+    }
+
+    .cycle-prev{
+         @extend %changeImg;
+        left: 15%;
+    }
+
+}

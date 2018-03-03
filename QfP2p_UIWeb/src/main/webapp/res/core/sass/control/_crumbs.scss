@@ -1,0 +1,26 @@
+﻿//面包屑样式
+.m-crumbs{
+    overflow:hidden;
+    color:nth($blueAsh,2);
+    ul{
+        margin-left:10px;
+        li{
+            float:left;
+            height:30px;
+            line-height:30px;     
+        }
+    }
+    .crumbs-btn{
+        a{
+        display:block;  
+        float:left;        
+        height:30px;
+        line-height:30px;
+        padding:0 10px;
+        &:hover{
+            color:nth($baseColor,1);
+            background:nth($blue,2);
+        }
+        }
+    }
+}

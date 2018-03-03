@@ -1,0 +1,26 @@
+﻿@charset 'utf-8';
+
+
+
+.m-newslistbox{
+    .newslist-title{
+        border-bottom:1px solid nth($gery,2);
+        overflow:hidden;
+        _height:48px;
+    }
+    .newslist-list{
+        padding-bottom:5px;
+        a{
+            display:block;
+            height:24px;
+            line-height:24px;
+            padding:8px;
+            border-bottom:1px dotted nth($gery,2);
+            color:nth($black,2);
+            &:hover{
+                color:nth($blue,2);
+                background:lighten(nth($gery,1),3%);
+            }
+        }
+    }
+}

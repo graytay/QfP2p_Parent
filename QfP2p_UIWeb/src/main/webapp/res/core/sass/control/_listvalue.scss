@@ -1,0 +1,55 @@
+﻿ul.ui-listvalue{
+    li{
+        border:1px solid nth($gery,2);
+        height:58px;
+        margin-bottom:5px;
+        position:relative;
+        a{
+            display:block;
+        }
+        div{
+            position:absolute;
+            top:0;
+            left:20px;
+            label{
+                display:block;
+                margin:10px;
+            }
+        }
+       &:hover{
+        background:nth($gery,1);
+    }
+    }
+    .listvalue-delete{
+        width:16px;
+        height:16px;
+        position:absolute;
+        left:0;
+        top:-3px;
+        color:nth($gery,3);
+        &:hover{
+            color:nth($blue,1);
+        }
+    }
+    %iconspostion{
+        position:absolute;
+        width:65px;
+        height:95px;
+        text-align:center; 
+        line-height:95px;
+        border-left:1px solid nth($gery,3);
+        &:hover{
+            background:nth($gery,2);
+        }
+    }
+    .listvalue-up{
+        @extend %iconspostion;
+        top:0;
+        right:66px; 
+    }
+    .listvalue-down{
+         @extend %iconspostion;
+        top:0;
+        right:0;
+    }
+}

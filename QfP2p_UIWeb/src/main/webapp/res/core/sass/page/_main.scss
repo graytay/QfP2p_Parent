@@ -1,0 +1,80 @@
+﻿@charset 'utf-8';
+//布局定位
+.m-warp{position:relative; min-height:100%;}
+.m-body{padding-bottom:$baseFooterHeight;}
+.m-footer {width:100%; min-width:getWidth(12); position:absolute; z-index:2; height:$baseFooterHeight; bottom:0; }
+.m-container{margin:auto;width:getWidth(12);position:relative;}
+
+//规定基础块体的宽度及高度
+%baseWidthLary{width:100%; min-width:getWidth(12); position:relative;}
+.m-top { @extend %baseWidthLary; z-index:4;height:40px; border-bottom:1px solid nth($gery,2); background:nth($baseColor,1); }
+.m-head { @extend %baseWidthLary;z-index:3; height:100px; background:nth($baseColor,1);}
+.m-banner { @extend %baseWidthLary;z-index:1;}
+.m-page { @extend %baseWidthLary;}
+
+
+//全局背景
+.m-bg{background:nth($gery,1); min-width:getWidth(12);}
+.m-userbox{}
+.m-bbgbox{border:1px solid nth($gery,3); background:nth($baseColor,1); }
+.m-buserbox{border:1px solid nth($gery,2); background:nth($baseColor,1);  padding-bottom:20px;}
+.m-serbox{width:getWidth(10,false);}
+
+
+
+//边框阴影
+.m-shadow{
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    filter:progid:dximagetransform.microsoft.shadow(color:#eeeeee,direction:170,strength:2);
+}
+
+.m-operback{
+    padding:5px 10px;
+    text-align:right;
+}
+
+.m-area select{
+    margin-right:5px;
+}
+
+//主体图文框
+.m-globalbox {
+    border: 1px solid nth($gery,2);
+    background: nth($baseColor,1);
+    @extend %radius5;
+    &:hover {
+        border: 1px solid nth($Ash,1);
+    }
+}
+
+//固定边框线
+.m-solidborder{border:1px solid nth($gery,2) !important;}
+.m-boborder{border-bottom:1px solid nth($gery,2) !important;}
+.m-toborder{border-top:1px solid nth($gery,2) !important;}
+.m-bdborder{border-bottom:1px dashed nth($gery,2) !important;}
+.m-dashedborder{border:1px dashed nth($gery,2) !important;}
+.m-ldashedborder{border-left:1px dashed nth($gery,2) !important;}
+.m-rightborder{border-right:1px solid nth($gery,2) !important;}
+
+//固定手势
+.m-cursor{cursor:pointer}
+
+//黑色字体链接 翻转蓝色
+.m-blacklink{
+    color:nth($black,1);
+    &:hover{
+        color: nth($blue,3);
+    }
+}
+.m-blacklink2{
+    color:nth($black,2);
+    &:hover{
+        color: nth($blue,3);
+    }
+}
+.m-gerylink3{
+    color:darken(nth($gery,3),6%);
+    &:hover{
+        color: nth($blue,1);
+    }
+}

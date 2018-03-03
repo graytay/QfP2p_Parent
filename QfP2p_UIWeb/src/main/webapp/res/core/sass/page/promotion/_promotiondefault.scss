@@ -1,0 +1,112 @@
+﻿@charset 'utf-8';
+//活动首页活动
+
+.m-promotion {    
+    .promotion-box {        
+        h4 {
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            position: relative;
+            padding-left: 20px;
+            text-align: left;
+            border-bottom:2px solid nth($blue,2);
+            span {
+                display: block;
+                width: getWidth(2);
+                background: nth($blue,2);
+                text-align: center;
+                color:#fff;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            span.t-finish{
+                background:nth($Ash, 2);
+            }
+        }
+        h4.t-finish{
+            border-bottom-color:nth($Ash, 2);
+        }
+
+        .promotion-activity {
+            height: 242px;            
+            border-top: 0;
+
+            .promotion-photo {
+                width: 260px;
+                height: 242px;
+            }
+
+            ul {
+                font-size: 16px;
+                color: nth($baseColor,2);
+                width: getWidth(12) - 270;
+
+                li {
+                    border-bottom: 1px dotted nth($gery,3);
+                    padding: 10px 20px;
+                    position: relative;
+
+                    div {
+                        font-family: $baseSongTi;
+                        font-size: 12px;
+                        overflow: hidden;
+                    }
+
+                    .promotion-position {
+                        position: absolute;
+                        bottom: 20px;
+                        right: 20px;
+                    }
+                }
+
+                .promotion-oneli {
+                    height: 30px;
+                    line-height: 30px;
+                }
+
+                .promotion-twoli {
+                    height: 80px;
+
+                    div {
+                        height: 48px;
+                    }
+                }
+
+                .promotion-threeli {
+                    height: 70px;
+                    border: 0;
+
+                    div {
+                        height: 34px;
+                        width: 320px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.m-promotiontable {
+    width:getWidth(12,ture,60);    
+    margin:20px;
+        border:1px solid nth($infoColor,3);
+        background:lighten(nth($infoColor,2),8%);
+        color:nth($infoColor,1);
+    th, td {
+        border: 1px solid darken(nth($infoColor,3),5%);
+        padding: 10px;
+    }
+
+    th {
+        width: 15%;
+            white-space:nowrap;
+            color: nth($baseColor,1);
+            background:nth($infoColor,3);
+    }
+
+    td {
+
+    }
+}

@@ -1,0 +1,19 @@
+﻿//站点关闭
+.siteclose-box{
+    margin:auto;
+    width:630px;
+    position:absolute;    
+    h3{
+        height:81px;
+        color:nth($black,1);
+        font-size:38px;
+        padding-left:400px;
+        background: url('../Images/logo/logo.png') no-repeat;
+    }
+    p{
+        padding:20px;
+        line-height:22px;
+        margin-top:20px;
+        border:1px dashed nth($gery,2);
+    }
+}

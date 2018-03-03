@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.user.dao.TUserMapper">
+  <resultMap id="brm" type="com.qf.user.po.TUser">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="phonenum" jdbcType="VARCHAR" property="phonenum" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="recommendno" jdbcType="VARCHAR" property="recommendno" />
+    <result column="flag" jdbcType="INTEGER" property="flag" />
+    <result column="registerip" jdbcType="VARCHAR" property="registerip" />
+
+  </resultMap>
+
+  <sql id="bcl">
+    id, username, phonenum, email, password, recommendno, flag, registerip
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="brm">
+    select 
+    <include refid="bcl" />
+    from t_user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectByName" resultMap="brm">
+    select <include refid="bcl"></include> from t_user where username=#{name} or email=#{name} or phonenum=#{name}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insert" parameterType="com.qf.user.po.TUser" useGeneratedKeys="true" keyProperty="id">
+    insert into t_user (id, username, phonenum, 
+      email, password, recommendno, 
+      flag, registerip)
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{phonenum,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{recommendno,jdbcType=VARCHAR}, 
+      #{flag,jdbcType=INTEGER}, #{registerip,jdbcType=VARCHAR})
+  </insert>
+
+  <update id="updateByPrimaryKey" parameterType="com.qf.user.po.TUser">
+    update t_user
+    set username = #{username,jdbcType=VARCHAR},
+      phonenum = #{phonenum,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      recommendno = #{recommendno,jdbcType=VARCHAR},
+      flag = #{flag,jdbcType=INTEGER},
+      registerip = #{registerip,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

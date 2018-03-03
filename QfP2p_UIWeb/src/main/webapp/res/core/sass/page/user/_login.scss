@@ -1,0 +1,115 @@
+﻿@charset 'utf-8';
+
+.m-login {
+    background:nth($baseColor,1);
+    border-top: 1px dotted nth($gery,3);
+    border-left: 1px dotted nth($gery,3);
+    border-bottom: 2px solid nth($gery,3);
+    border-right: 2px solid nth($gery,3);
+    .login-msg {
+        border-top: 1px dashed nth($gery,2);
+        font-family: $baseSongTi;
+        font-size: 12px;
+        color: nth($black,1);
+
+        .login-msgleft {
+            @include inline-block;
+            a {
+                color: nth($blueAsh,1);
+
+                &:hover {
+                    color: nth($blueAsh,3);
+                }
+            }
+        }
+
+        .login-msgright {
+            @include inline-block;
+            float: right;
+            color: nth($black,1);
+            padding: 5px;
+
+            &:hover {
+                color: nth($blue,3);
+            }
+        }
+    }
+}
+
+
+//迷你登录  支付密码
+.mini-box {
+    background: #ffffff;
+
+    .paypassword {
+        width: 100%;
+    }
+
+    .minimiddle {
+        border: 1px solid nth($gery,2);
+        margin: 10px 20px;
+        padding: 30px 60px;
+    }
+
+    .minifoot {
+        width: 100%;
+        padding: 15px 0;
+        overflow: hidden;
+        background: nth($gery,1);
+        position: relative;
+        text-align: right;
+
+        .m-sumtip {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+        }
+    }
+}
+
+.minititle {
+    width: 100%;
+    background: nth($blue,2);
+    position: relative;
+    height: 40px;
+
+    h4 {
+        color: #ffffff;
+        font-size: 18px;
+        position: absolute;
+        left: 10px;
+        line-height: 40px;
+    }
+
+    a {
+        position: absolute;
+        line-height: 30px;
+        top: 0;
+        right: 0;
+        color: nth($blue,3);
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.mini-page {
+    background: url('../Images/bg/minibg.png');
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    .mini-box {
+        position: absolute;
+        top: 35%;
+        left: 40%;
+        -moz-box-shadow: 0 0 20px #000;
+        -webkit-box-shadow: 0 0 20px #000;
+        box-shadow: 0 0 20px #000;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=135, Color='#333333')";
+        filter: progid:DXImageTransform.Microsoft.Shadow(Strength=10, Direction=135, Color='#333333');
+    }
+}

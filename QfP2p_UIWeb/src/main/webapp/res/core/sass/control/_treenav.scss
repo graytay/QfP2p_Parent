@@ -1,0 +1,133 @@
+﻿@charset 'utf-8';
+//用户中心树形导航
+.ui-treenav {
+    dt {
+        width: 100%;
+
+        a {
+            display: block;
+            padding: 0 20px;
+            font-size: 16px;
+            background: lighten(nth($gery,1),4%);
+            line-height: 40px;
+            color: nth($black,2);
+            border: nth($gery,2) 1px solid;
+            margin-bottom: 5px;
+
+            i {
+                @include inline-block;
+            }
+
+            &:hover {
+                color: nth($baseColor,1);
+                background: nth($blue,1);
+            }
+        }
+
+        .on {
+            color: nth($baseColor,1);
+            background: nth($blue,2);
+            margin-bottom: 0;
+            border-bottom: 0 none;
+        }
+    }
+
+    dd {
+        display: none;
+
+        ul {
+            margin-bottom: 5px;
+            border: nth($gery,2) 1px solid;
+            border-top: 0 none;
+            background: nth($baseColor,1);
+            overflow: hidden;
+            _zoom: 1;
+
+            li {
+                margin: 5px 10px;
+
+                a {
+                    display: block;
+                    padding: 5px 20px;
+                    _height: 31px;
+                    _padding: 0 20px;
+                    _line-height: 31px;
+                    color: nth($black,1);
+
+                    &:hover {
+                        color: nth($baseColor,1);
+                        background: nth($blue,1);
+                    }
+                }
+
+                .on {
+                    color: nth($baseColor,1);
+                    background: nth($blue,1);
+                }
+            }
+        }
+    }
+}
+//帮助中心树形导航
+.service-treenav {    
+    dt {
+        width: 100%;
+
+        a {
+            display: block;
+            padding: 0 20px;
+            font-size: 16px;
+            background: lighten(nth($gery,1),3%);
+            line-height: 40px;
+            color: nth($black,2);
+            border: nth($gery,2) 1px solid;
+
+            i {
+                @include inline-block;
+            }
+
+            &:hover {
+                color: nth($baseColor,1);
+                background: nth($blue,1);
+            }
+        }
+
+        .on {
+            color: nth($baseColor,1);
+            background: nth($blue,2);
+        }
+    }
+
+    dd {
+
+        ul {
+            margin-bottom: 5px;
+            border: nth($gery,2) 1px solid;
+            border-top: 0 none;
+            background: nth($baseColor,1);
+            overflow: hidden;
+
+            li {
+                margin: 5px 10px;
+                a {
+                    display: block;
+                    padding: 5px 20px;
+                    _height: 31px;
+                    _padding: 0 20px;
+                    _line-height: 31px;
+                    color: nth($black,1);
+
+                    &:hover {
+                        color: nth($baseColor,1);
+                        background: nth($blue,1);
+                    }
+                }
+
+                .on {
+                    color: nth($baseColor,1);
+                    background: nth($blue,1);
+                }
+            }
+        }
+    }
+}

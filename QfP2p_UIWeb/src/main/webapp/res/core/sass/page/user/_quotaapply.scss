@@ -1,0 +1,60 @@
+﻿@charset 'utf-8';
+.m-quotalist{
+    color:nth($black,2);
+    overflow:hidden;
+    width:100%;
+    line-height:35px;
+    background:lighten(nth($gery,1), 3%);
+    padding:20px 0 10px 0;
+    dt{
+        font-size:18px;
+        width:100%;
+        padding:0 0 0 20px;
+    }
+    dd{
+        .quotalist-title{
+            display:inline-block;
+            width:120px;
+            text-align:right;
+        }
+        width:50%;
+        background:0;
+        border:0;
+        float:left;
+        clear:none;
+        padding:0;
+        margin-bottom:15px;
+    }
+    .quotalist-box{
+        margin:auto;
+        width:90%;
+        th{
+            width:35%;
+            font-weight:normal;
+            background:nth($infoColor,2);
+            color:nth($infoColor,1);
+            border:nth($infoColor,3);
+        }
+        td{
+            padding-left:5px;
+            font-size:12px;
+        }
+    }
+
+      .quotalist-warning{
+            background:nth($warningColor,2);
+            color:nth($warningColor,1);
+            border:nth($warningColor,3);
+      }
+      .quotalist-error{
+            background:nth($errorColor,2);
+            color:nth($errorColor,1);
+            border:nth($errorColor,3);
+      }
+      .quotalist-success{
+            background:nth($successColor,2);
+            color:nth($successColor,1);
+            border:nth($successColor,3);
+      }
+}
+

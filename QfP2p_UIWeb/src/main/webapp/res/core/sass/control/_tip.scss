@@ -1,0 +1,39 @@
+﻿@charset 'utf-8';
+%tip{ 
+    @extend %radius3; 
+    font-family: $baseSongTi;
+    font-size: 12px;  
+    color: nth($baseColor,1);
+    background: nth($red,2);
+}
+
+.m-tip {
+    @include inline-block;
+    @extend %tip;
+    height: 20px;   
+    background: nth($red,2) url('../Images/bg/leftarrow.jpg') no-repeat;
+    padding: 3px 10px 3px 15px;
+}
+
+.m-sumtip {
+    @extend %tip;   
+    display:block;
+    margin: 5px 0; 
+    line-height:26px;
+    padding:0 10px;
+    }
+
+.m-toptip {
+    z-index:999;
+    @include inline-block;
+    @extend %tip;   
+    background:nth($red,2);
+    padding:0 10px;
+    line-height:30px;
+    
+}
+.toptip-bgtop{
+    display:block;
+    background:url('../Images/bg/toparrow.png') no-repeat;
+    margin-top:-3px;
+}

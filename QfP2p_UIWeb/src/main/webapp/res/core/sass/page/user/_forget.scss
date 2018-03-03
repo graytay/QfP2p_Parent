@@ -1,0 +1,12 @@
+﻿@charset 'utf-8';
+ //第二行为红色文字 
+.t-redfont{
+        width:getWidth(6);
+        padding-left:40px;
+    span{
+        display:block;
+        font-size:24px;
+        color:#c4504f;
+        text-align:center;
+    }
+}

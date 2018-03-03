@@ -1,0 +1,35 @@
+﻿@charset 'utf-8';
+
+.ui-smsmenu {
+    position: absolute;
+    top:12px;
+    border-bottom: 3px solid nth($infoColor,3);
+    z-index:1000;
+    @extend %radius3;
+    a {
+        
+        width: 150px;
+        display: block;
+        padding: 4px 5px;
+        background: nth($baseColor,1);
+        border-left:1px solid nth($infoColor,2);
+        border-bottom: 1px dashed nth($infoColor,2);
+        border-right: 3px solid nth($infoColor,3);
+        &:hover {
+            background: nth($infoColor,2);
+        }
+    }
+
+    .smsmenu-arrow {
+        display: block;
+        width: 100%;
+        height: 7px;
+        background: url("../Images/bg/samll-arrow.png") no-repeat 50%;
+    }
+
+    .smsmenu-noneborder {       
+        border: none 0;
+        border-left:1px solid nth($infoColor,2);
+        border-right: 3px solid nth($infoColor,3);
+    }
+}

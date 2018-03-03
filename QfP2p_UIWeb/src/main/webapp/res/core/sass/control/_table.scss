@@ -1,0 +1,94 @@
+﻿@charset 'utf-8';
+//常用表格 头部背景是蓝色的表格
+.table-normal{
+    width:100%;
+    text-align:center;
+    table-layout: fixed;
+    tr{
+        th{
+            height:45px;
+            color:nth($baseColor,1);
+            background:nth($blue,2);
+            border-bottom:3px solid nth($blue,3);
+            font-weight:normal;
+        }
+        td{
+            @extend %textoverflow; 
+            height:35px;
+            border-top:1px solid nth($gery,2);
+            overflow:hidden;
+            white-space: nowrap;
+            padding:0 10px;
+            font-size:12px;
+            font-family:$baseSongTi;
+            }
+        &:hover{
+            td{
+                background:lighten(nth($infoColor,2),3%);
+                }
+              }
+        }
+    .alt{
+        td{
+            background:lighten(nth($gery,1),3%);         
+        }
+    } 
+    .pager{
+        td{
+            //height:80px;
+        }
+        &:hover{
+            td{
+                background:nth($baseColor,1);
+            }
+        }
+    } 
+    .ui-vcheckbox{
+        label{
+            height:20px;
+        }
+    }  
+}
+
+//我的钱包页面表格
+.table-account{
+    width:100%;
+    overflow:hidden; 
+    h4{
+        height:45px;
+        line-height:45px;
+        background:nth($blue,2);
+        padding-left:20px;
+        color:nth($baseColor,1);
+        margin:10px 0;
+    }
+    table{
+        font-size:12px;
+        font-family:$baseSongTi;
+        table-layout: fixed;   
+        width:100%;
+        line-height:35px;
+        tr{
+            th{
+                text-align:right;
+                font-weight:normal;  
+            }
+            td{
+                 text-align:left;
+                span{
+                    color:nth($red,3)
+                }
+            }
+        }
+         .account-dashline{
+            th{
+                border-top:1px dashed nth($gery,2);
+            }
+            td{
+                border-top:1px dashed nth($gery,2);
+            }
+        }
+         
+    }  
+   
+}

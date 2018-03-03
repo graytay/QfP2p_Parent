@@ -1,0 +1,76 @@
+﻿@charset "uft-8";
+.ui-slider {
+    @include inline-block;
+    height:auto; 
+    margin-left:5px;
+    vertical-align:middle;
+    .slider-noneselect{
+        moz-user-select: -moz-none;
+        -moz-user-select: none;
+        -o-user-select:none;
+        -khtml-user-select:none;
+        -webkit-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+    }
+
+    .slider-background{
+        @include inline-block;
+        height:12px;
+        position:relative;
+        background:url('../Images/bg/silder-bg.jpg') repeat-x top;
+        -moz-border-radius: 13px;
+        -webkit-border-radius: 13px;
+        border-radius: 13px;
+        vertical-align:middle;
+        margin:0 10px;
+        .slider-fillingbar{
+            height:12px;
+        -moz-border-radius: 13px;
+        -webkit-border-radius: 13px;
+        border-radius: 13px;
+            position:absolute;
+            background:url('../Images/bg/silder-fillbg.jpg') repeat-x top;
+        }
+        .slider-changebtn{
+            font-size:12px;
+            width:12px;
+            height:12px;
+            line-height:12px;
+            position:absolute;
+            i{
+            display:block;
+            position:absolute;
+            top:-3px;
+            left:-9px;
+            width:20px;
+            height:20px;
+            cursor:pointer;
+            background: url('../Images/bg/slider_btn.png') no-repeat center center;
+            &:hover{
+                background: url('../Images/bg/slider_btnhover.png') no-repeat center center;
+            }
+            }
+        }
+    }
+
+        a{
+            vertical-align:middle;
+            margin:0;
+            padding:0;
+            height:12px;
+            line-height:12px;
+            width:30px;
+            text-align:center;
+            border:none 0;
+            outline: none;
+            color:nth($black,2);
+            &:hover{
+                color:nth($green,3);
+            }
+        .slider-increase{}
+        .slider-cutback{}
+    }
+
+}
+

@@ -1,0 +1,21 @@
+﻿@charset 'utf-8';
+//上传头像
+.t-uploadheader{
+    background:#f7f7f7;
+    width:100%;
+    padding:20px 0;
+    margin:20px 0 10px 0;
+    .uploadheader-photo{
+        @extend %radius3;
+        width:118px;
+        height:118px;
+        padding:5px;
+        margin:auto;
+        overflow:hidden;
+        border:1px dashed nth($gery,3);
+        img{
+            width:118px;
+            height:118px;            
+        }
+    }    
+}

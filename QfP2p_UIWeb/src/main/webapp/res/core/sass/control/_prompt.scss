@@ -1,0 +1,36 @@
+﻿@charset 'utf-8';
+//用户提示
+.m-prompt{ 
+    height:103px;   
+    .prompt-left{
+        width:getWidth(2,false);
+        font-size:18px;
+        .creditimg{
+            width:50px;
+            height:50px;
+            margin:10px auto;
+            display:block;
+        }
+        .qq{
+            display:block;
+            text-align:center;
+            font-size:14px;
+            margin-top:20px;
+            color:nth($black,3);
+        }       
+    }
+    .prompt-small{
+        width:getWidth(7,false,30px);
+        height:90px;
+        background: url('../Images/bg/mycredit.png') no-repeat right;
+        background-color:nth($gery,1);  
+        padding-top:13px;
+        font-family:$baseSongTi;
+        font-size:12px;
+        p{
+            text-indent:2em;
+            padding:0 60px 0 10px;
+            line-height:26px;           
+        }
+    }
+}

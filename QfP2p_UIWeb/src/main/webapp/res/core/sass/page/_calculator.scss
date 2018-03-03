@@ -1,0 +1,41 @@
+﻿@charset 'utf-8';
+//理财评估  计算器和抗风险评估
+.m-calculator{
+    .ui-tab{
+        width:getWidth(12,false)-2px;
+        dd{
+            overflow:hidden;
+            .calculator-form{
+                 width:getWidth(5,flase,72px);
+                 border-right:1px solid nth($gery,2);
+                 .topfont{
+                     color:#666666!important;
+                 }
+            }
+            .calculator-infor{
+                width:getWidth(7,flase,35px);
+                border-right:1px solid nth($gery,2);
+                padding:0 20px;
+                ul{
+                    font-size:12px;
+                    font-family:$baseSongTi;
+                    overflow:hidden;
+                    margin-left:30px;
+                    zoom:1;
+                    li{
+                        float:left;
+                        width:33%;
+                    }
+                }
+                .result{
+                  margin:200px 0 0 100px;
+                   p{
+                       width:220px;
+                       margin-left:80px;
+                   }
+                }
+            }
+        }
+    }
+}
+   

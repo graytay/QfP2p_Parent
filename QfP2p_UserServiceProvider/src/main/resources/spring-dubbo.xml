@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <!--接口的实现类-->
+
+    <!--服务的提供者-->
+    <!--发布服务-->
+    <!--dubbo的注册中心-->
+    <dubbo:registry address="10.0.127.179:2181" protocol="zookeeper"></dubbo:registry>
+    <!--设置dubbo协议，标记协议名称和端口号-->
+    <dubbo:protocol name="dubbo" port="20882"></dubbo:protocol>
+    <!--设置应用信息-->
+    <dubbo:application name="user-provider"></dubbo:application>
+    <!--发布服务 标记发布的接口和对应的接口实现类 register=1防止重复发布-->
+    <dubbo:service interface="com.qf.userservice.UserService" ref="userServiceProvider" register="1"></dubbo:service>
+
+</beans>

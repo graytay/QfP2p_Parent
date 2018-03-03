@@ -1,0 +1,27 @@
+﻿@charset 'utf-8';
+//用户外部最大的盒子 
+.m-wholebox{
+    padding: 20px;
+    overflow: hidden;
+    _zoom: 1;
+    .t-flowsteps{
+        height: 53px;
+        margin:30px getWidth(2,false,-80);
+        .step-num2{
+            width:getWidth(5,false,-30);
+        }
+        .step-num3{
+            width:getWidth(5,false,-30);
+        }       
+    }
+   
+}
+
+.m-title{
+        padding: 0 0 20px 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: nth($black,3);
+        border-bottom: 1px solid nth($gery,2);
+        line-height:24px;
+    }

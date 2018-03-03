@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>用户注册 - 千锋教育贷</title>
+    <link href="/res/core/styles/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<script type="application/javascript" src="/res/core/scripts/head.js"></script>
+        <div class="m-page">
+            <div class="m-container g-zindexmin g-ohide mt20 mb20">
+                <div class="m-userreg js-tabs" data-tabs-selector=".userreg-select dt a">
+                    <dl class="userreg-select">
+                        <dt><a href="#js-form-phone" class="on">通过手机注册</a></dt>
+                        <dt><a href="#js-form-email">通过邮箱注册</a></dt>
+                        <dd>
+                            <strong class="g-block fs18">已有千锋教育贷账号？</strong>
+                            <a href="login.htm" class="g-block btn-nobord c-important w164 mt10">登 录</a>
+                            <div class="userreg-loginoauth">
+                                <span>您还可通过以下方式登录:</span>
+                            </div>
+                        </dd>
+                    </dl>
+
+                    <div class="userreg-form" id="js-form-phone">
+                        <div class="userreg-title">
+                            <a href="/Help/" target="_blank" class="fs12 g-right ff-songti pa5 g-fnormal">如何进行注册？</a>
+                            <i class="iconfont fs20">&#xe619;</i>  手机注册
+                        </div>
+                        <div class="form-big mlg2 mt20 mb20">
+                            <form class="js-auto js-vinline" method="post" action="http://localhost:8080/uibg/useradd.op" id="formid">
+
+                                <div class="ui-radio js-tip">
+                                    <input type="hidden" name="registerip" class="rip">
+                                    <span class="leftfont"><i class="fcred-3">*</i> 选择类型</span>
+                                    <label><input name="usertype" type="radio" value="1" data-vtype="group" data-vmin="1" data-vmsg="请选择会员类型。" />我要借款</label><label><input name="usertype" type="radio" value="2" data-vtype="group" data-vmin="1" data-vmsg="请选择会员类型。" />我要投资</label>
+                                </div>
+
+                                <div id="js-validform">
+                                    <div class="input-big js-tip">
+                                        <label class="leftfont"><i class="fcred-3">*</i> 手机号码</label>
+                                        <input type="text" class="text w218 js-vtarget" name="phonenum" id="phone" placeholder="请输入您的手机号码" maxlength="11" data-vtype="phone|fun" data-vmsg="请输入正确的手机号码。|此手机号码已经被使用。" data-vfun="validPhone"  />
+                                    </div>
+                                    <div class="input-big js-tip" id="js-codeinput">
+                                        <label class="leftfont"><i class="fcred-3">*</i> 验证码</label>
+                                        <input type="text" class="text w95" id="js-phoneCode" name="vcode" maxlength="6" placeholder="请输入验证码" data-vtype="must|fun" data-vfun="validVCode" data-vmsg="请输入验证码|验证码错误" />
+                                        <a href="javascript:void(0);" id="js-phoneCodeImg" onclick="$('img',this).attr('src', 'http://localhost/uibg/codecreate.op?v=' + (new Date()).getTime())">
+                                            <img src="http://localhost/uibg/codecreate.op" width="85" height="31" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="input-big js-tip js-sendvcode" data-vcode-target="#phone" data-vcode-targetForm='#js-validform'>
+                                    <label class="leftfont"><i class="fcred-3">*</i> 手机验证码</label>
+                                    <input type="text" name="validCode" class="text js-sendvcode-code" size="10" placeholder="请输入验证码" disabled="disabled" maxlength="6" data-vtype="length|fun" data-vfun="validPhoneCode" data-vmin="6" data-vmax="6" data-vmsg="请输入正确的验证码。|验证码不正确。" value="123456" />
+                                    <input type="button" class="btn-nobordbig c-normal js-sendvcode-btn" id="js-phoneCodeBtn" value="获取手机验证码" />
+                                </div>
+                                <div class="input-big js-tip">
+                                    <label class="leftfont"><i class="fcred-3">*</i> 用户名</label>
+                                    <input type="text" name="username" class="text w218" placeholder="请输入您的用户名" maxlength="12" data-vtype="custom|length|fun" data-vreg="^[a-zA-Z][a-zA-Z0-9_]+$" data-vfun="validUserName" data-vmin="6" data-vmax="12" data-vmsg="必须以字母开头，支持字母,数字。|用户名必须在6-12位长度之间。|该用户名已存在。" />
+                                    <span class="prompt js-prompt">用户名必须以字母开头，支持6~12位的字母、数字及下划线。</span>
+                                </div>
+                                <div class="input-big js-tip">
+                                    <label class="leftfont"><i class="fcred-3">*</i> 密码</label>
+                                    <input type="password" class="text w218" name="password" id="password1" maxlength="20" data-vtype="must|length" data-vmin="6" data-vmax="20" data-vmsg="请输入密码。|密码长度过短。" />
+                                    <span class="prompt js-prompt">密码支持6~20位的字母、数字及下划线。</span>
+                                </div>
+                                <div class="input-big js-tip">
+                                    <label class="leftfont"><i class="fcred-3">*</i> 确认密码</label>
+                                    <input type="password" class="text w218" data-vtype="must|same" data-vref="password1" data-vmsg="请输入确认密码。|两次密码输入不一致。" />
+                                    <span class="prompt js-prompt">请再次输入与登录密码。</span>
+                                </div>
+                                <div class="input-big js-tip">
+                                    <label class="leftfont">推荐人</label>
+                                    <input type="text" class="text w218" placeholder="请输入您收的推荐号" name="recommendno" value=""  />
+                                    <span class="prompt js-prompt">如果没有收到推荐号可不填写。</span>
+                                </div>
+                                <div class="ui-vcheckbox mt25 js-tip mlgm1">
+                                    <label>
+                                        <input type="checkbox" name="protocol1" checked="checked" value="1" data-vtype="group" data-vmin="1" data-vmsg="您需要同意用户协议。" />同意《<a target="_blank" href="/Agreement/?type=userreg">千锋教育贷用户协议</a>》</label>
+                                </div>
+                                <input type="hidden" name="type" value="phone" />
+                                <div class="btn-submits mt10 mlg1">
+                                    <button class="btn-bbord c-normal iconfont fs16 w300" onclick="register();"
+                                            tabindex="4">点击注册</button>
+                                    <div class="wg3"><em class="m-sumtip js-vsum"></em></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="userreg-form g-hide" id="js-form-email">
+                        <div class="userreg-title">
+                            <a href="/Help/" target="_blank" class="fs12 g-right ff-songti pa5 g-fnormal">如何进行注册？</a>
+                            <i class="iconfont fs20">&#xe618;</i>  邮箱注册
+                        </div>
+                        <div class="form-big mlg2 mt20 mb20">
+                            <form class="js-auto js-vinline" method="post" action="/User/Register.htm" data-onsuccess="location.href = '/User/';">
+
+                                <div class="ui-radio js-tip">
+                                    <input type="hidden" name="registerip" class="rip">
+                                    <span class="leftfont"><i class="fcred-3">*</i> 选择类型</span>
+                                    <label><input name="userTypeId2" type="radio" value="1" data-vtype="group" data-vmin="1" data-vmsg="请选择会员类型。" />我要投资</label><label><input name="userTypeId2" type="radio" value="2" data-vtype="group" data-vmin="1" data-vmsg="请选择会员类型。" />我要借款</label>
+                                </div>
+
+                                <div class="input-big js-tip">
+                                    <label class="leftfont"><i class="fcred-3">*</i> 电子邮箱</label>
+                                    <input type="text" class="text w218 js-vtarget" name="email" id="email" placeholder="请输入邮箱地址" data-vtype="email|ajax" data-vmsg="请输入正确的邮箱地址。|此邮箱已经被使用。" data-vurl="?action=exists" />
+                                </div>
+                                <div class="input-big js-tip js-sendvcode" data-vcode-target="#email">
+                                    <label class="leftfont"><i class="fcred-3">*</i> 验证码</label>
+                                    <input type="text" name="validCode" class="text js-sendvcode-code" size="10" placeholder="请输入验证码" disabled="disabled" maxlength="6" data-vtype="length|fun" data-vfun="validEmailCode" data-vmin="6" data-vmax="6" data-vmsg="请输入正确的验证码。|验证码不正确。" />
+                                    <input type="button" class="btn-nobordbig c-normal js-sendvcode-btn" value="发送验证邮件" />
+                                </div>
+                                <div class="input-big js-tip">
+                                    <label class="leftfont"><i class="fcred-3">*</i> 用户名</label>
+                                    <input type="text" name="name" class="text w218" placeholder="请输入您的用户名" maxlength="12" data-vtype="custom|length|fun" data-vreg="^[a-zA-Z][a-zA-Z0-9_]+$" data-vfun="validUserName" data-vmin="6" data-vmax="12" data-vmsg="必须以字母开头，支持字母,数字。|用户名必须在6-12位长度之间。|该用户名已存在。" />
+                                    <span class="prompt js-prompt">用户名必须以字母开头，支持6~12位的字母、数字及下划线。</span>
+                                </div>
+                                <div class="input-big js-tip">
+                                    <label class="leftfont"><i class="fcred-3">*</i> 密码</label>
+                                    <input type="password" class="text w218" name="password" id="password2" maxlength="50" data-vtype="must|length" data-vmin="6" data-vmax="50" data-vmsg="请输入密码。|密码长度过短。" />
+                                    <span class="prompt js-prompt">密码支持6~20位的字母、数字及下划线。</span>
+                                </div>
+                                <div class="input-big js-tip">
+                                    <label class="leftfont"><i class="fcred-3">*</i> 确认密码</label>
+                                    <input type="password" class="text w218" data-vtype="must|same" data-vref="password2" data-vmsg="请输入确认密码。|两次密码输入不一致。" />
+                                    <span class="prompt js-prompt">请再次输入与登录密码。</span>
+                                </div>
+                                <div class="input-big js-tip">
+                                    <label class="leftfont">推荐人</label>
+                                    <input type="text" class="text w218" placeholder="请输入您收的推荐号" name="recommendBy" value=""  />
+                                    <span class="prompt js-prompt">如果没有收到推荐号可不填写。</span>
+                                </div>
+                                <div class="ui-vcheckbox mt25 js-tip mlgm1">
+                                    <label>
+                                        <input type="checkbox" name="protocol2" checked="checked" value="1" data-vtype="group" data-vmin="1" data-vmsg="您需要同意用户协议。" />同意《<a target="_blank" href="/Agreement/?type=userreg">千锋教育贷用户协议</a>》</label>
+                                </div>
+                                <input type="hidden" name="type" value="email" />
+                                <div class="btn-submits mt10 mlg1">
+                                    <input type="button" class="btn-bbord c-normal wg3" value="提交注册" data-success-text="注册成功" />
+                                    <div class="wg3"><em class="m-sumtip js-vsum"></em></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="application/javascript" src="/res/core/scripts/footer.js"></script>
+<script src="/res/core/scripts/jquery.js"></script>
+<script src="/res/core/scripts/core.js"></script>
+<script>var gconfig = { siteName: '千锋教育贷', pageExt: '.htm' };</script>
+<script src="/res/core/scripts/main.js"></script>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+
+<script>
+
+    $(function () {
+       // var ip=returnCitySN["cip"];
+        $(".rip").val(returnCitySN["cip"]);
+    });
+    //校验手机验证码
+    function validPhoneCode(val) {
+       // return common.sendValidCode.valid($('.js-vtarget[name=phone]').val(), val);
+        return true;
+    };
+    //校验邮箱验证码
+    function validEmailCode(val) {
+        return common.sendValidCode.valid($('.js-vtarget[name=email]').val(), val);
+    };
+    //校验手机号是否重复
+    function  validPhone() {
+        return true;
+    }
+    //图片验证码
+    function validVCode(val) {
+        //return common.imageValidCode.valid(val);
+        return true;
+    }
+    //验证用户名
+    function validUserName() {
+        return true;
+    }
+    $('#js-phoneCodeBtn').click(function () {
+        $('#js-phoneCode').attr('data-vmust', 'true');
+        setTimeout(function () {
+            $('#js-phoneCode').val('').attr('data-vmust', 'false');
+            $('#js-phoneCodeImg').trigger('click');
+        }, 60 * 1000);
+    });
+    common.sendValidCode.initInput();
+    //注册
+    function register() {
+        var $form =$("#formid");
+        $.ajax({
+            type:$form.attr("method"),
+            url:$form.attr("action"),
+            data:$form.serialize(),
+            success:function (data) {
+                var obj=eval("("+data+")");
+                if(obj.code==200){
+                    window.location.href="/user/initinfo.html";
+                } else {
+                    alert(obj.msg);
+                }
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

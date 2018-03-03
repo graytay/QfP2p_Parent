@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.user.dao.TRecommendMapper">
+  <resultMap id="BaseResultMap" type="com.qf.user.po.TRecommend">
+    <id column="no" jdbcType="VARCHAR" property="no" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="phonenum" jdbcType="VARCHAR" property="phonenum" />
+  </resultMap>
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_recommend
+    where no = #{no,jdbcType=VARCHAR}
+  </delete>
+
+  <insert id="insert" parameterType="com.qf.user.po.TRecommend">
+    insert into t_recommend (no, realname, phonenum
+      )
+    values (#{no,jdbcType=VARCHAR}, #{realname,jdbcType=VARCHAR}, #{phonenum,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.qf.user.po.TRecommend">
+    insert into t_recommend
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="no != null">
+        no,
+      </if>
+      <if test="realname != null">
+        realname,
+      </if>
+      <if test="phonenum != null">
+        phonenum,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="no != null">
+        #{no,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null">
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="phonenum != null">
+        #{phonenum,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.qf.user.po.TRecommend">
+    update t_recommend
+    <set>
+      <if test="realname != null">
+        realname = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="phonenum != null">
+        phonenum = #{phonenum,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where no = #{no,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qf.user.po.TRecommend">
+    update t_recommend
+    set realname = #{realname,jdbcType=VARCHAR},
+      phonenum = #{phonenum,jdbcType=VARCHAR}
+    where no = #{no,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,324 @@
+﻿@charset 'utf-8';
+
+%textoverflow {
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+//论坛首页顶部热帖排行和最新主题
+.m-bbsrank {
+    overflow: hidden;
+    _zoom: 1;
+
+    .bbsrank-photo {
+        width: getWidth(4,flase,-30px);
+        height: 200px;
+        position:relative;
+        a {
+            display: block;
+            width: getWidth(4,flase,-30px);
+            height: 200px;
+        }
+
+        img {
+            width: getWidth(4,flase,-30px);
+            height: 200px;
+        }
+
+        .cycle-pager {
+            position: absolute;
+            bottom: 3px;
+            z-index: 1000;
+            font-size: 0;
+            left: 5px;
+
+            span {
+                display: block;
+                width: 25px;
+                height: 8px;
+                background: nth($baseColor,1);
+                float: left;
+                margin-right: 5px;
+                cursor: pointer;
+            }
+
+            .cycle-pager-active {
+                background: nth($blue,1);
+            }
+        }
+
+        .cycle-next {
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: nth($baseColor,1);
+            opacity: 0.1;
+            z-index: 1000;
+            font-size: 18px;
+            cursor: pointer;
+            height: 100%;
+            line-height:200px;
+            padding:0 5px;
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .cycle-prev {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: nth($baseColor,1);
+            z-index: 1000;
+            font-size: 18px;
+            cursor: pointer;
+            opacity: 0.1;
+            height: 100%;
+            line-height:200px;
+            padding:0 5px;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    dl {
+        width: getWidth(4,flase,40px);
+
+        dt {
+            color: nth($baseColor,2);
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 2px;
+        }
+
+        dd {
+            font-size: 12px;
+            font-family: $baseSongTi;
+            height: 28px;
+
+            a {
+                @extend %textoverflow;
+                color:nth($blueAsh,3);
+                display: inline-block;
+                width: getWidth(3,flase,50px);
+                margin-right: 10px;
+                &:hover{
+                    color:nth($black,2);
+                }
+            }
+
+            span {
+                @extend %textoverflow;
+                display: inline-block;
+                width: getWidth(1,flase);
+            }
+        }
+    }
+
+    .t-dash {
+        height: 200px;
+        border-left: 1px dashed nth($gery,2);
+    }
+}
+
+//论坛首页发帖列表
+.m-bbspost {
+    color: nth($black,1);
+    font-size: 12px;
+    font-family: $baseSongTi;
+
+    li {
+        height: 50px;
+        padding: 15px 0 15px 15px;
+        *zoom: 1;        
+        .bbs-photo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .bbs-middle {
+            width: getWidth(5);
+
+            h5 {
+                a, span {
+                    font-size: 18px;
+                    font-family: $baseFontFamily;
+                    color: nth($black,2);
+                    margin-right: 10px;
+                }
+            }
+
+            p {
+                @extend %textoverflow;
+                color: nth($blueAsh,1);
+                margin-top: 3px;
+                width: getWidth(5,false,40px);
+            }
+        }
+
+        .bbs-right {
+            line-height: 50px;
+            height: 50px;
+
+            span, a {
+                @extend %textoverflow;
+                display: inline-block;
+                height: 50px;
+            }
+
+            a {
+                width: getWidth(5,flase,50px);
+                margin-right: 10px;
+            }
+
+            span {
+                width: getWidth(1,flase,-35px);
+            }
+        }
+    }
+    .m-bdborder{
+        &:hover{
+            border-color:nth($blue, 3) !important;
+        }
+    }
+}
+//版块列表
+.m-bbslist {
+    .m-bbspost {
+        position: relative;
+        _width: getWidth(12,true,2px);
+        li {
+            padding: 20px 10px;
+
+            .bbs-middle {
+                width: getWidth(8);
+
+                p {
+                    width: getWidth(8,false,40px);
+                }
+            }
+        }
+    }
+
+    .table-normal {
+
+        th {
+            height: 35px;
+            font-size: 12px;
+            font-family: $baseSongTi;
+        }
+
+        td {
+            height: 70px;
+            border: 0;
+            border-bottom: 1px dashed nth($gery,2);
+
+            .bbs-img {
+                width: 50px;
+                height: 50px;
+                display: inline-block;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+//帖详情页
+.m-bbsdetail {
+        h3 {
+            overflow: hidden;
+            line-height: 20px;
+            background: nth($blue,1);
+            color: nth($baseColor,1);
+            padding: 15px 20px;
+            zoom: 1;
+
+            .bbsdetail-post {
+                color:nth($baseColor,1);
+                text-align: right;
+                margin:0 20px;
+                &:hover {
+                    color: nth($blue,3);
+                }
+            }
+        }
+
+        .bbs-table {
+            width: 100%;
+            font-family: $baseSongTi;
+            font-size: 12px;
+            border:1px solid nth($gery,3);
+            tr {
+                th, td {
+                    vertical-align: top;
+                }
+                .t-am{
+                    vertical-align:middle;
+                }
+                th {
+                    background:lighten(nth($Ash,2),25%);
+                    font-weight: normal;
+                    border-right:1px solid nth($Ash,1);
+                    border-bottom: 4px solid nth($Ash,1);
+                    .bbsdetail-user {
+                        width: getWidth(2,false);
+                        background: lighten(nth($Ash,2),25%);
+                        text-align: center;
+                        img{
+                            border:5px solid nth($baseColor,1);
+                        }
+                        .bbsdetail-username{
+                            padding:6px 0;
+                            margin-bottom:10px;
+                            border-bottom:1px dashed nth($Ash,3);
+                        }
+                    }
+                }
+
+                td {
+                    position: relative;
+                    border-bottom: 4px solid nth($gery,1);
+                    .bbsdetail-font {
+                        width: getWidth(10,flase,3px);
+                        background: #fff;
+
+                        .bbsdetail-top {
+                            height: 30px;
+                            line-height: 30px;
+                            border-bottom: 1px dashed nth($gery,2);
+                            color: nth($gery,3);
+                        }
+
+                        .bbsdetail-bottom {
+                            color: nth($black,2);
+
+                            .bbsdetail-reply {
+                                color: nth($black,1);
+                                position: absolute;
+                                bottom: 10px;
+                                right: 20px;
+
+                                &:hover {
+                                    color: nth($blue,2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    .bbsdetail-box {
+        width: getWidth(12,flase,2px);
+    }
+}

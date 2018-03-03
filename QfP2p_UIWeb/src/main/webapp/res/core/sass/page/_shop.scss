@@ -1,0 +1,110 @@
+﻿@charset 'utf-8';
+//商城首页
+
+.m-shop {
+    h3 {
+        font-size: 18px;
+        border-bottom: 1px solid nth($gery,2);
+        line-height: 50px;
+        padding-left: 20px;
+        margin-bottom:5px;
+    }
+
+    .shop-all {
+        overflow: hidden;
+        zoom: 1;
+        .shop-box {
+            width:getWidth(3,false);
+            margin:5px 10px;
+            height:272px;
+            float:left;
+            a{
+                display:block;
+                margin:1px;
+                border:1px solid nth($gery,3);
+                background:nth($baseColor,1);
+                cursor: pointer;
+                .shop-photo{
+                    overflow:hidden;
+                    img{
+                        width:getWidth(3,false,6);
+                        height: 178px;
+                        margin:1px;
+                    }
+                }
+
+                .shop-infor{
+                    overflow:hidden;
+                    height:272px - 180px;
+                    h5{
+                        width:getWidth(3,false,10);
+                        margin-left:5px;
+                        height:36px;
+                        line-height:36px;
+                        text-align:center;
+                        @extend %textoverflow;
+                        font-size:16px;
+                        color:nth($black,1);
+                    }
+
+                    .g-left{
+                        color:nth($blueAsh,3);
+                        margin-left:10px;
+                    }
+                    .t-scorecolor{
+                            color:nth($blue,3);
+                        }
+                }
+
+                &:hover{
+                    margin:0px;                    
+                    border: 2px solid nth($blue,1);
+                }
+            }
+        }
+    }
+}
+
+//商城详情页
+.m-shopdetail {
+    height: 260px;
+    padding: 10px;
+
+    .shopdetail-photo{
+        width: getWidth(5,flase,50px);
+        height: 260px;
+
+        img {
+            width: getWidth(5,flase,50px);
+            height: 260px;
+        }
+    }
+
+    .shopdetail-infor{
+        width: getWidth(5,flase,30);
+        padding: 10px 20px;
+        color: nth($black,2);
+        line-height: 26px;
+
+        ul {
+            font-size: 12px;
+            font-family: $baseSongTi;
+            border: 1px dotted nth($gery,3);
+            background:#fcfcfc;
+            padding: 10px 20px;
+            margin: 10px 0;
+        }
+    }
+}
+
+.m-shopdetailtab{
+    _width:getWidth(10,flase,40);
+}
+#shopdetail {
+    p {
+        margin-left: 20px;
+        margin-right: 20px;
+        
+    }
+}
+

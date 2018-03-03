@@ -1,0 +1,94 @@
+﻿@charset 'utf-8';
+//用户中心卡片结构
+.m-card {
+    overflow: hidden;
+    padding: 0 10px;
+    zoom: 1;
+
+    li {
+        @extend %radius5;
+        float: left;
+        width: getWidth(3,false,35);
+        height: 140px;
+        padding: 0 10px;
+        margin: 10px 6px 0 0;
+        border: 1px solid nth($blueAsh,1);
+
+        .card-top {
+            height: 30px;
+            margin-top: 10px;
+
+            img {
+                float: left;
+                width: 80px;
+                height: 24px;
+            }
+
+            a {
+                float: right;
+                font-size: 12px;
+                font-family: $baseSongTi;
+                margin-left: 10px;
+                display: none;
+            }
+        }
+
+        .card-middle {
+            height: 80px;
+
+            span {
+                display: block;
+                color: nth($black,3);
+            }
+        }
+
+        .card-foot {
+            font-size: 12px;
+            font-family: $baseSongTi;
+            color: nth($gery,3);
+            text-align: right;
+        }
+
+        &:hover {
+            border: 1px solid nth($blue,2);
+            .card-top {
+                a {
+                    color: nth($blue,2);
+
+                    &:hover {
+                        color: nth($blue,3);
+                    }
+                }
+            }
+
+
+            .card-foot {
+                color: nth($blue,2);
+            }
+            a {
+                color: nth($blue,2);
+            }
+        }
+    }
+
+    .card-add {
+        border: 1px dashed nth($blueAsh,2);
+        text-align: center;
+        cursor:pointer;
+        a {
+            display: block;
+            width: getWidth(3,false,35);
+            height: 140px;
+            color: nth($blueAsh,2);
+
+            i {
+                display:inline-block;
+                margin-top: 40px;
+            }
+        }
+
+        &:hover {
+            border: 1px dashed nth($blue,2);
+        }
+    }
+}

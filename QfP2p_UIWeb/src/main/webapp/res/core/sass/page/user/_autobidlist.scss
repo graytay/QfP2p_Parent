@@ -1,0 +1,52 @@
+﻿@charset 'utf-8';
+
+.m-autobid {    
+    padding: 0 10px;
+
+    .autobid-box {
+        @extend %radius5;
+        display: block;
+        overflow: hidden;
+        border: 1px solid nth($gery,2);
+        position: relative;
+        margin-bottom: 10px;
+
+        .t-borrowbidinfor {
+            padding: 0 0 10px 20px;
+
+            p {
+                margin: 5px 0;
+            }
+
+            ul {
+                li {
+                    height: 20px;
+                }
+            }
+        }
+
+        .ui-toggle {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+
+        .autobid-ranking {
+            color: nth($black,2);
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+
+            p {
+                color: nth($gery,3);
+                font-size: 12px;
+                font-family: $baseSongTi;
+                line-height: 14px;
+            }
+        }
+
+        &:hover {
+            background: nth($gery,1);
+        }
+    }
+}

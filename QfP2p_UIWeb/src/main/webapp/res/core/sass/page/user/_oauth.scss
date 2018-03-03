@@ -1,0 +1,18 @@
+﻿@charset 'utf-8';
+
+.m-oauth {    
+    .oauth-right {
+        margin-top: 40px;
+        width: getWidth(4,false,30px);
+    }
+
+    .oauth-left {
+        width: getWidth(8,true,20px);
+        margin-top: 20px;
+        border-right: 1px solid nth($gery,2);
+       .oauth-form {
+            margin: auto;
+            width: getWidth(5,false,45);
+        }       
+    }
+} 

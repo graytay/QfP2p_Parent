@@ -1,0 +1,380 @@
+<html><head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>会员资料初始向导 - 千锋p2p</title>
+<link href="/res/core/styles/main.css?v=20151023175515" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    
+    <div class="m-warp m-bg">
+        <div class="m-body">
+            
+<div class="m-top">
+    <div class="m-container">
+  <div class="g-left wg7 mt5">
+    <span class="fcblueash-2">
+      欢迎致电： <span class="fs18 mr10">400-186-9990</span> 服务时间：9:00 - 18:00
+    </span>
+  </div>
+
+  <div class="g-right wgm5">
+    <ul class="top-topnav g-right js-topnav">
+      <li>
+        <a href="/tool/calculator.htm">工具箱</a>
+        <dl>
+          <dd>
+            <a href="/tool/calculator.htm">利息计算器</a>
+          </dd>
+          <dd>
+            <a href="/tool/risk.htm">抗风险能力测试</a>
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <a href="/help/">帮助中心</a>
+      </li>
+      <li>
+        <a href="/news/" class="g-noneborder">关于我们</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<div class="m-head">
+    <div class="m-container pt10">
+        <div class="g-left wg4">
+            <h1 class="head-logo">
+            <a href="/">千锋p2p</a>
+            </h1>
+        </div>
+        <div class="g-right wg8">            
+            <ul class="head-nav mt30">
+                <li class="ml25" style="display:inline;">
+                    <a href="/">首 页</a>
+                </li>
+                <li>
+                    <a href="/borrow/">我要投资 <i class="iconfont"></i></a>
+                    <dl class="m-shadow">
+                        <dt><a href="/borrow/">投资列表</a></dt>
+                        <dt><a href="/borrow/transferlist.htm">债权市场</a></dt>
+                        <dt><a href="/finance/">智能投资</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <a href="/loan/">我要借款 <i class="iconfont"></i></a>
+                    <dl class="m-shadow">
+                        <dt><a href="/loan/">快速申请</a></dt>
+                        <dt><a href="/help/list.htm?cid=3">借款说明</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <a href="/promotion/">最新活动 <i class="iconfont"></i></a>
+                    <dl class="m-shadow">
+                        <dt><a href="/promotion/">最新活动</a></dt>
+                        <dt><a href="/shop/">积分商城</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <a href="/bbs/">社 区</a>
+                </li>
+            
+    <li class="head-fixednav" data-logined="9">
+        <a href="/user/" class="blue"><i class="iconfont fs18"></i> 我的账户</a>
+        <div class="my-account">
+            <div class="box">
+                <span class="box-arrow"></span>
+                <div class="my-container" id="js-myaccout"></div>
+                <div class="box-bottom">
+                    <div class="my-container mt10">
+                        <a href="/user/account/onlinerecharge.htm" class="blue mr5"><i class="iconfont fs18"></i> 充值</a>
+                        <a href="/user/account/cash.htm"><i class="iconfont fs18"></i> 提现</a>
+                        <a href="javascript:member.logout();" class="loginout"><i class="iconfont fs18"></i> 安全退出</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+
+</ul>
+        </div>
+    </div>
+</div>
+
+            <div class="m-page">
+                    
+    <div class="m-container g-zindexmin g-ohide mt20 mb20 m-globalbox m-wholebox">
+        <div class="m-title">
+            <span><i class="iconfont fs30"></i> 基本资料向导</span>
+        </div>
+        <p class="m-infotip">为了保障您的资金安全以及更健康的网络环境，我们需要您提供相关资料并设置有效的支付密码。当设置成功后，方可在平台中进行相关的投资理财操作。<br>
+            您也可以暂时不提交资料，<a href="/user/?rnd=true">先随便看看&gt;&gt;</a></p>
+         
+        <div class="t-flowsteps js-stepnav">
+            <ol class="ui-stepbar step-num2">
+                <li class="first current">
+                    <span>
+                        <i>1</i>
+                        <em>个人资料</em>
+                    </span>
+                </li>
+
+                <li class="last">
+                    <span>
+                        <i>2</i>
+                        <em>支付密码</em>
+                    </span>
+                </li>
+            </ol>
+        </div>
+            
+        <div class="form-big ml204">
+            <form class="js-auto js-vsum js-step" action="/user/updateUserInfo.action" method="post" data-onsuccess="common.pagetip('success', ' 资料设置成功。', '/user/', '会员首页');">
+                <div class="js-step">
+                    <div class="input-big mt40" id="nickname" style="display: none;">
+                        <label class="leftfont">帐户昵称</label>
+                        <input type="text" name="nickname" class="text w332" maxlength="20" placeholder="请输入帐户昵称" data-vtype="must|ajax" data-vurl="?action=checknickname" data-vmsg="请输入帐户昵称。|该昵称已被使用。">
+                        <span class="prompt">请勿设置与账号相同的昵称，以保障您的帐户安全。</span>
+                    </div>
+                    
+                      <!--   <div class="input-big js-tip mt40">
+                            <label class="leftfont">手机号码</label>
+                            <input type="text" name="phone" id="phone" class="text w332" placeholder="请输入您的手机号码" data-vtype="phone" data-vmsg="请输入手机号码。" maxlength="11">
+                        </div>
+                        <div class="input-big js-sendvcode" data-vcode-target="#phone">
+                            <label class="leftfont">手机验证码</label>
+                            <input type="text" name="validcode" class="text js-sendvcode-code" size="20" placeholder="请输入您收到的验证码"  maxlength="4" data-vtype="length|fun" data-vfun="validphonecode" data-vmin="6" data-vmax="6" data-vmsg="请输入正确的验证码。|验证码不正确。">
+                            <input type="button" class="btn-nobordbig c-normal js-sendvcode-btn" value="发送验证码">
+                        </div>
+                     -->
+                    
+                        
+                        <div class="input-big g-clear" id="realname" style="display: none;">
+                            <label class="leftfont">真实姓名</label>
+                            <input type="text" class="text w332" name="realname" maxlength="50" data-vtype="must" data-vmsg="请输入真实姓名。" placeholder="请输入您的真实姓名">
+                        </div>
+                        <div class="input-big" id="idcard" style="display: none;">
+                            <label class="leftfont">身份证号</label>
+                            <input type="text" class="text w332" name="idcardnum" maxlength="18" data-vreg="^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|x)$" data-vmsg="请输入正确的身份证号码。|身份证号码已存在。" placeholder="请输入您的身份证证件号">
+                        </div>
+                    
+                    <div class="btn-submits ml99" id="next" style="display: none;">                    
+                        
+                        
+                            <input type="submit" value="下 一 步" class="btn-nobordbig c-normal w172 g-left"><a href="/user/?rnd=true" class="ml50 g-left mt10">先随便逛逛&gt;&gt;</a>
+                        
+                        <div class="g-clear"></div>
+                        <div class="w366"><em class="m-sumtip js-vsum"></em></div>
+                    </div>
+                </div>
+                
+                    <div class="js-step g-hide" id="mima" style="display: none;">
+                        <div class="input-big mt40">
+                            <label class="leftfont">支付密码</label>
+                            <input type="password" class="text w332" name="newpaypwd" placeholder="请输入您的支付密码" id="password1" maxlength="50" data-vtype="must|length" data-vmin="6" data-vmax="50" data-vmsg="请输入密码。|密码长度过短。">
+                            <span class="prompt">支付密码是确认资金交易的重要凭证，不能与登录密码一致。</span>
+                        </div>
+                        <div class="input-big">
+                            <label class="leftfont">密码确认</label>
+                            <input type="password" class="text w332" placeholder="请再次输入您的支付密码" data-vtype="must|same" data-vref="password1" data-vmsg="请输入确认密码。|两次密码输入不一致。">
+                        </div>
+                        <div class="btn-submits ml99">
+                            <input type="submit" value="提 交 并 修 改" class="btn-bbord fs16 c-normal w366">
+                            <div class="w366"><em class="m-sumtip js-vsum"></em></div>
+                        </div>
+                    </div>
+                
+            </form>
+        </div>
+    </div>
+
+            </div>
+        </div>
+        
+<div class="m-footer footer-big">
+    <div class="m-container footer-bline">
+  <div class="footer-left">
+    <div class="footer-logo"></div>
+    <div class="footer-workinfo">
+      <p>
+        服务热线：<span>工作时间（09:00-18:00）</span>
+      </p>
+      <p>
+        <strong>400 6058 823</strong>
+      </p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <dl>
+      <dt>
+        <a href="/help/">使用帮助</a>
+      </dt>
+      <dd>
+        <a href="/user/register.htm" class="ml10">立即注册</a>
+      </dd>
+      <dd>
+        <a href="/help/list.htm?cid=1" class="ml10">如何投资</a>
+      </dd>
+      <dd>
+        <a href="/help/list.htm?cid=3" class="ml10">如何借款</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        <a href="/news/">关于我们</a>
+      </dt>
+      <dd>
+        <a href="/news/?id=4" class="ml10">公司简介</a>
+      </dd>
+      <dd>
+        <a href="/news/?id=5" class="ml10">法律顾问</a>
+      </dd>
+      <dd>
+        <a href="/news/?id=1" class="ml10">联系我们</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        <a href="/help/list.htm?cid=4">安全保障</a>
+      </dt>
+      <dd>
+        <a href="/help/list.htm?cid=24" class="ml10">本息保障</a>
+      </dd>
+      <dd>
+        <a href="/help/list.htm?cid=25" class="ml10">政策法规</a>
+      </dd>
+      <dd>
+        <a href="/help/list.htm?cid=27" class="ml10">隐私保护</a>
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        <a href="/help/">了解更多</a>
+      </dt>
+      <dd>
+        <a href="/help/" class="ml10">常见问题</a>
+      </dd>
+      <dd>
+        <a href="/help/servicelist.htm" class="ml10">联系客服</a>
+      </dd>
+      <dd>
+        <a href="/help/list.htm?cid=7" class="ml10">资费说明</a>
+      </dd>
+    </dl>
+    <div class="footer-code">
+      <img src="/res/core/images/default/twocode.png">
+    </div>
+  </div>
+</div>
+<div class="m-container footer-copyinfo pa10">
+  © 版权所有 all rights reserved | <a rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn/publish/query/indexfirst.action">这里是备案号</a>
+</div>
+
+
+</div>
+
+        <div><a href="http://www.hjwis.com/" target="_blank">本系统由慧聚天下网络科提供，p2p网贷系统免费版</a></div>
+    </div>
+
+    <script src="/res/core/scripts/jquery.js?v=20150624215102"></script>
+    <script src="/res/core/scripts/core.js?v=20151225173543"></script>
+    <script>var gconfig = { sitename: '千峰p2p', pageext: '.htm' };</script>
+    <script src="/res/core/scripts/main.js?v=20151104153540"></script>   
+    
+    
+    <script src="/res/uploadify/jquery.uploadify.min.js?v=20150624215121"></script>
+    <script>
+        function validphonecode(val) {
+            return common.sendvalidcode.valid($('#phone').val(), val);
+        };
+
+        common.sendvalidcode.initinput();
+
+        var initupload = function (n) {
+            settimeout(function () {
+                $('#btncard' + n).uploadify({
+                    width: 136,
+                    height: 36,
+                    multi: false,
+                    removetimeout: 0,
+                    swf: '/res/uploadify/uploadify.swf?v=852635',
+                    uploader: '/res/uploadify/swfupload.htm?type=image&width=600',
+                    buttonclass:'btn-nobordbig c-normal',
+                    buttontext: n == 1 ?  '上传身份证正面' : '上传身份证反面',
+                    filetypeexts: '*.png;*.jpg;*.jpeg;*.gif;*.bmp;',
+                    formdata: {
+                        u : 'ybbgkmiibp-amds1a0ww6ze3heix0oknso1azlomjzw='
+                    },
+                    onuploadsuccess: function(res, data) {
+                        eval('var d = ' + data);                     
+                        if (d.success) {
+                            $('#cardphoto' + n).val(d.message).trigger('blur');
+                            $('#cardimg' + n).attr('src', d.message);
+                        } else {
+                            alert(d.message);
+                        }
+                    }
+                });
+            }, 10);
+        };
+
+        initupload(1);
+        initupload(2);
+    </script>
+
+<!--[if lte ie 6]> 
+    <script src="/res/core/scripts/dd_belatedpng.js?v=20150624215102"></script> 
+    <script type="text/javascript"> 
+        dd_belatedpng.fix('.head-logo,.footer-logo'); 
+    </script> 
+<![endif]--> 
+<script type="text/javascript">
+	//获取用户的状态来决定显示什么
+	$.ajax({
+		url:"/user/getStaus.action",
+		success:function(data){
+			//alert(data);
+			var json=JSON.parse(data);
+			if(json.code==1){
+				//成功,然后才开始展示真正的技术
+				var statu=new String(json.data);
+				var status = statu.split(",");
+				//alert(status.length);
+				for (var i = 0; i < status.length; i++) {
+					//alert(status[i]);//第一个是手机 第二个是邮箱,第三个是实名,第四个昵称
+					var currentstatus =status[i];
+					if (i==0&&currentstatus==0) {
+						//显示手机
+						
+					} 
+					if(i==2&&currentstatus==0){
+						//$("#realname").css("display","block")
+						$("#realname").show();
+						$("#idcard").show();
+						$("#next").show();
+					} else if(i==2){
+						$("#realname").remove();
+						$("#idcard").remove();
+					}
+					if(i==3&&!currentstatus){
+						$("#nickname").show();
+						$("#next").show();
+					}else if(i==3){
+						$("#nickname").remove();
+					}
+				}
+			}else{
+				//弹弹弹,弹走鱼尾纹
+			}
+		},
+		error:function(data){
+			
+		}
+	})
+	
+	
+</script>
+
+</body></html>

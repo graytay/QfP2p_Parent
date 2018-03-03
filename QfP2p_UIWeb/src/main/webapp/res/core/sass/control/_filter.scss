@@ -1,0 +1,53 @@
+﻿@charset 'utf-8';
+//用户中心条件筛选表格
+.m-filter{
+    width:100%;
+    font-size:12px;
+    font-family:$baseSongTi;
+    tr{      
+        td{
+            .text{
+                padding:5px 6px;
+                border:1px solid nth($blueAsh,1);
+                &:focus{
+                    border:1px solid nth($blue,1);
+                }
+            }
+            a{
+                @extend %radius3;
+                display:inline-block;
+                margin:0 10px 5px 10px;
+                padding:2px 5px;
+                color:nth($black,1);
+                &:hover{
+                    background:nth($green,1);
+                }
+            }
+             .on{
+                background:nth($blue,2);
+                color:#fff!important;
+                &:hover{
+                    background:nth($blue,3);
+                }
+            }
+            span{
+                margin:0 10px;
+            }
+        }
+    }
+    .filter-date{
+        th,td{
+            background:lighten(nth($gery,2),3%);
+            height:60px;
+            border-top:1px solid nth($gery,3);
+            border-bottom:1px solid nth($gery,3);
+        }
+       
+    }
+    .filter-style{
+        th,td{
+            background:lighten(nth($gery,2),5%);
+            padding:10px 0;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+﻿@charset "UTF-8";
+//全局变量设置
+
+//----------------------------------前端全局变量-------------------------------
+// 基本颜色
+// lighten($color, $amount)
+// darken($color, $amount)
+// opacify($color, $amount)
+// mix($color1, $color2[, $amount])
+//-----------------------------------------------------	
+$gery:                  #f1f1f1 #e2e2e2 #d4d4d4;
+$Ash:                   #c6c6c6 #b9b9b9 #ababab;
+$blueAsh:               #9e9e9e #919191 #848484;
+$black:                 #474747 #303030 #1b1b1b;
+
+
+$blue:                  #5ec2eb #26ade4 #1f8ed7;   //默认
+//$blue:                  #3bac47 #31973b #267f2d;   //新环境
+//$blue:                  #a00000 #7d0000 #5a0000;   //永商贷
+$red:                   #ff8f8e #ff6867 #ff5554;
+
+$green:                 #dcec7d #d0e650 #b9da42;    //默认
+//$green:                 #c9ae65 #ba9853 #886f3d;   //今日普惠
+//$green:                 #e5cc82 #dbb866 #d1a44a;    //永商贷
+
+$orange:                #f4d179 #ffce54 #ffb645;
+$baseColor:             #fff #000;
+// 开关设置
+$lte7:                  true !default; //是否兼容ie6-7
+$filter:                true !default; //是否为ie6-8开启css3滤镜兼容，常用于渐变背景 
+
+//基础内容设置
+$baseFontSize:          14px!default;
+$baseLineHeight:        1.5 !default;
+$baseFontFamily:        'Microsoft YaHei', 'Lucida Sans Unicode', 'Myriad Pro', 'Hiragino Sans GB', 'Heiti SC', Verdana, simsun !default;
+$baseSongTi:            Arial,SimSun !default;
+$baseYaHei:             "Microsoft Yahei"; //微软雅黑
+$baseHeiTi:             "SimHei"; //黑体
+$baseIconsFont:         'iconfont',  'Microsoft YaHei', 'Lucida Sans Unicode', 'Myriad Pro', 'Hiragino Sans GB', 'Heiti SC', Verdana, simsun !important;
+$baseFontColor:         nth($black,2) !default;
+$baseLinkColor:         nth($blue,2) nth($blue,3) !default;
+$placeholder:           false nth($gery,3) !default;
+$baseFooterHeight:      190px;
+// radius 圆角半径
+$baseRadius:            5px !default;
+$smallRadius:           3px !default;
+
+// 交互配色
+// 警告，错误，成功，提示
+// 分别为：文本色，背景色，边框色
+$warningColor:                 #514721 #FFF6BF #FFD324 !default;
+$errorColor:                   #8A1F11 #FBE3E4 #FBC2C4 !default;
+$successColor:                 #264409 #E6EFC2 #C6D880 !default;
+$infoColor:                    #2D7798 #D5EDF8 #92CAE4 !default;

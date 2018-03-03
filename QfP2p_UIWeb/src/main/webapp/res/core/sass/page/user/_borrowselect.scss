@@ -1,0 +1,56 @@
+﻿@charset 'utf-8';
+//借款发布
+.m-borrowbid {
+    display:block;
+    height:130px;
+    border:1px solid nth($gery,2);
+    margin:10px;
+
+    .borrowbid-photo {
+        margin: 10px 15px 0 10px;
+
+        img {
+            @extend %radius5;
+            width: 110px;
+            height: 110px;
+            border: 1px solid nth($gery,2);
+        }
+    }
+
+    .t-borrowbidinfor {
+        width: getWidth(9,false)-170px;
+        margin-top: 10px;
+        ul{
+            overflow: hidden;
+            li{
+                float:left;
+                width:50%;
+            }
+        }
+    }
+    &:hover {
+        background: nth($gery,1);
+    }
+}
+
+.t-borrowbidinfor {
+    font-size: 12px;
+    font-family: $baseSongTi;
+    color: nth($black,2);
+
+    h4 {
+        font-size: 24px;
+        font-family: $baseFontFamily;
+    }
+
+    p {
+        color: nth($blueAsh,1);
+        margin: 1px 0 3px 0;
+    }
+
+    ul {
+        color:nth($black,1);
+    }
+   
+
+}

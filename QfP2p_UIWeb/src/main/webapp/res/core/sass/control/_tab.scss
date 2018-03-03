@@ -1,0 +1,34 @@
+﻿@charset 'utf-8';
+.ui-tab{
+    margin-top:3px;
+    dt{
+        float:left;
+        margin-right:3px;
+      a{           
+            display:block;           
+            color:nth($blueAsh,3);                
+            padding:8px 25px 4px 25px; 
+            border-left:1px solid nth($gery,1); 
+            border-right:1px solid nth($gery,1);       
+        }
+        .on{
+            background:nth($baseColor,1);
+            color:nth($blue,2);
+            border:1px solid nth($gery,2);
+            border-bottom:0;
+            padding:8px 25px 8px 25px;
+            border-top:3px solid nth($blue,1);
+            margin-bottom:-1px;
+            position:relative;   
+            margin-top:-3px;      
+        }
+    }
+    dd{
+         
+        border:1px solid  nth($gery,2);
+        *width:100%;   
+        background:nth($baseColor,1);       
+        clear:both;
+        padding-bottom:20px;
+    }
+}

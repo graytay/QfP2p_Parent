@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="QfP2p_UIWeb:war">
+    <output-path>$PROJECT_DIR$/QfP2p_UIWeb/target</output-path>
+    <root id="archive" name="QfP2p_UIWeb-1.0.war">
+      <element id="artifact" artifact-name="QfP2p_UIWeb:war exploded" />
+    </root>
+  </artifact>
+</component>

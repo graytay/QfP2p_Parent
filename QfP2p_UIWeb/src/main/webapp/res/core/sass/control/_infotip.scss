@@ -1,0 +1,36 @@
+﻿@charset 'utf-8';
+.m-infotip{
+        margin-top:10px;
+        padding:10px;
+        padding-left:62px;
+        font-family: $baseSongTi;
+        font-size:12px;
+        line-height:22px;
+        color:nth($infoColor,1);
+        background:nth($infoColor,2) url('../Images/bg/infotip.png') center left no-repeat;
+        border:2px solid nth($infoColor,3); 
+        a{
+            color:nth($infoColor,3);
+            &:hover{
+                color:nth($infoColor,1);
+            }
+        }   
+    }
+
+.m-wartip{
+    background:nth($warningColor,2);
+    border:2px solid nth($warningColor,3); 
+    overflow:hidden;
+    height:45px;
+    a{
+        padding:10px;
+        height:25px;
+        display:block;
+        color:nth($warningColor,1);
+        font-weight:bold;
+        &:hover{
+        color:nth($errorColor,1);
+        font-weight:bold;
+        }
+    }
+}

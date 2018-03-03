@@ -1,0 +1,82 @@
+﻿@charset 'utf-8';
+
+.ui-stepbar {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    li {
+        float: left;
+        height: 53px;
+        line-height: 23px;
+        color: nth($black,1);
+        background: url('../Images/bg/stepvbar.png')repeat-x 0 9px;
+        position: relative;
+        span {
+            float: left;
+            width: auto;
+            text-align: center;
+            i {
+                display: block;
+                width: 29px;
+                height: 29px;
+                line-height: 28px;
+                color: nth($black,1);
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: bold;
+                background: url('../Images/bg/stepv.png') no-repeat;
+            }
+
+            em {
+                position: absolute;
+                left: -5%;
+                white-space:nowrap;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+
+    .last {
+        width: 29px !important;
+        /*width: auto !important;
+        position: absolute;
+        right: 0;*/
+        span{
+           em{
+               left: -40%;
+           }
+        }
+    }
+
+    .current{
+        span{
+            i{
+                color: nth($baseColor,1);
+                background: url('../Images/bg/steps.png') no-repeat;
+            }
+            em{
+                color: nth($green,2);
+            }
+        }        
+    }
+
+    .done{
+        background: url('../Images/bg/stepsbar.png')repeat-x 0 9px;
+        span{
+            i{
+                color: nth($baseColor,1);
+                background: url('../Images/bg/steps.png') no-repeat;
+            }
+            em{
+                color: nth($black,1);
+            }
+        }
+    }
+}
+.step-num2 li {width: 90%;}
+.step-num3 li {width: 45%;}
+.step-num4 li {width: 33.3%;}
+
+

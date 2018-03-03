@@ -1,0 +1,108 @@
+﻿@charset 'utf-8';
+//日历
+.ui-calendar {
+    background-color: nth($baseColor,1);
+    border: 1px solid nth($gery,3);
+    width: 290px;
+    font-size: 12px;
+    font-family: $baseSongTi;
+    height: 322px;
+    text-align: center;
+    position:absolute;  
+    display:none; 
+    overflow:hidden;
+}
+
+.calendar-title {
+    background-color: nth($blue,1);
+    line-height:20px;
+    overflow: hidden;
+    color: nth($baseColor,1);
+    padding:10px 0 5px 0;
+    a {
+        color: nth($baseColor,1);
+        margin: 0 5px;
+        padding: 0 5px;
+        font-size: 14px;
+        font-family: 'Microsoft YaHei';
+
+        &:hover {
+            color: nth($green,1);
+        }
+
+        i {
+            color: nth($blue,3);
+            margin: 0 20px;
+
+            &:hover {
+                color: nth($green,1);
+            }
+        }
+    }
+}
+.calendar-week{
+    text-align:center; 
+    color:nth($baseColor,1);    
+    overflow:hidden;
+    background-color: nth($blue,1);
+    padding-left:5px;
+    span{
+        float:left; 
+        width:40px;
+    }
+}
+.calendar-body {
+    height: 240px;
+    font-size: 12px;
+    background: #fff;
+}
+
+.calendar-day {
+    height: 180px;
+    padding: 10px 0 0 5px;
+    line-height: 30px;
+
+    span {
+        color: #ccc;
+    }
+
+    a {
+        color: nth($black,1);
+
+        &:hover {
+            color: nth($baseColor,1);
+            background: nth($blue,2);
+        }
+    }
+
+    .current {
+        color: nth($baseColor,1);
+        background: nth($blue,1);
+    }
+}
+
+.calendar-day span, .calendar-day a {
+    float: left;
+    width: 40px;
+    height: 30px;
+}
+
+.calendar-foot {
+    background-color: nth($gery,2);
+    height: 35px;
+    clear: both;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.calendar-time {
+    clear: both;
+
+    input {
+        width: 18px;
+        text-align: center;
+        border: 1px solid #ddd;
+        padding: 2px 4px;
+        margin: 0 2px;
+    }
+}

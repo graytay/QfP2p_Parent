@@ -1,0 +1,39 @@
+﻿@charset 'utf-8';
+//登出页
+.m-logout{
+    .logout-box{
+        width:730px;
+        margin:0 auto;
+    }
+    .logout-ad{           
+        img{
+            width:100%;
+        }
+    }
+}
+//信息页
+.m-tips{
+    width:730px;
+    padding:30px 0;
+    margin:0 auto;
+    overflow:hidden;    
+    .tip-right{
+       width:600px;
+       font-size:12px;
+       font-family:$baseSongTi;
+       margin:12px 0 0 30px;
+       strong{
+           font-size:24px;
+           margin-right:20px;
+           font-family:$baseFontFamily;
+       }
+        span{
+            display:block;
+            width:100%;
+            background:nth($gery,1);
+            line-height:40px;
+            margin-top:10px;
+            padding-left:20px;
+        }
+    }
+}

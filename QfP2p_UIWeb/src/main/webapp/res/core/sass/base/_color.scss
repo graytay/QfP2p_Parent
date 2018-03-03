@@ -1,0 +1,72 @@
+﻿@charset "utf-8";
+.c-normal{
+    color: nth($baseColor,1);
+    background: nth($blue,1);
+    border-color: nth($blue,3)!important;
+
+    &:hover {
+        color: nth($baseColor,1);
+        background: nth($blue,2);
+        border-color: nth($blue,3);
+    }
+}
+   
+.c-priority{
+    color: nth($black,1);
+    background: nth($baseColor,1);
+    border-color: nth($gery,3)!important;
+
+    &:hover {
+        background: nth($gery,1);
+        border-color: nth($gery,3);
+        color: nth($black,2);
+}
+}
+
+.c-important{
+    color: nth($black,2);
+    background: nth($green,1);
+    border-color: nth($green,3)!important;
+
+    &:hover {
+        background: nth($green,2);
+        border-color: nth($green,3);
+        color: nth($black,3);
+    }
+}
+
+.c-disable{
+    color: nth($gery,3);
+    background: nth($gery,2);
+    border-color: nth($gery,3);
+    cursor:default;
+    &:hover {
+        color: nth($gery,3);
+        background: nth($gery,1);
+        border-color: nth($gery,3);
+    }
+}
+
+.c-obvious{
+    color: nth($baseColor,1);
+    background: nth($red,2);
+    border-color: nth($red,2);
+    cursor:default;
+    &:hover {
+        color: nth($gery,1);
+        background: nth($red,3);
+        border-color: nth($red,2);
+    }
+}
+
+.c-minibtn{
+    color: nth($baseColor,1);
+    background: nth($red,2);
+    border-color: nth($red,3);
+    cursor:pointer;
+    &:hover {
+        color: nth($red,3);
+        background: nth($red,1);
+        border-color: nth($red,3);
+    }
+}

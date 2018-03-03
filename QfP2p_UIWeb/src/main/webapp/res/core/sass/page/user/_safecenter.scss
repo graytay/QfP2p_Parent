@@ -1,0 +1,80 @@
+﻿@charset 'utf-8';
+//安全中心
+
+//安全中心表格
+.m-safecenter {
+    width: 100%;
+    text-align: center;
+
+    tr {
+        td {
+            height: 80px;
+            border-bottom: 1px dashed nth($gery,3);
+
+            .safecenter-style {
+                font-size:12px;
+                font-family: $baseSongTi;
+                h4 {
+                    color: nth($black,3);
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-family:$baseFontFamily;
+
+                    a {
+                        font-size: 12px;
+                        font-weight: normal;
+                        font-family: $baseSongTi;
+                    }
+                    .t-promotionlink{
+                        font-size: 16px;
+                        font-family: $baseYaHei;
+                    }
+                    .safecenter-line {
+                        font-size: 14px;
+                        color: nth($gery,3);
+                    }
+                }
+
+                p {
+                    color: nth($gery,3);
+                }
+            }
+        }
+    }  
+
+}
+
+
+//实名认证身份证照片上传
+.t-uploadid {
+    overflow: hidden;
+
+    .uploadid-span {
+        display: inline-block;
+        width: 85px;
+        text-align: right;
+        margin-right: 14px;
+        margin-top: 60px;
+        float: left;
+    }
+
+    .uploadid-photobox {
+        float: left;
+
+        .uploadid-photo {
+            @extend %radius3;
+            width: 165px;
+            height: 120px;
+            padding: 5px;
+            border: 1px dashed nth($gery,3);
+            overflow: hidden;
+            margin-bottom: 10px;
+
+            img {
+                @extend %radius3;
+                width: 165px;
+                height: 120px;
+            }
+        }
+    }
+}

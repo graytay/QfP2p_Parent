@@ -1,0 +1,64 @@
+﻿@charset 'utf-8';
+.ui-pages{
+    color:nth($blueAsh,3);
+    margin:20px 5px;
+    height:30px;
+    line-height:30px;
+    span{ 
+           
+       strong{
+           color:nth($blue,3);
+           margin:0 5px;
+       } 
+    }
+    .disabled{
+        @extend %radius3;
+        color:nth($blueAsh,3);
+        background:nth($gery,2);
+        border:1px solid nth($blueAsh,1); 
+        padding:4px 10px;       
+        margin:0 5px;
+    }
+    .remind{
+        border:none;
+    }
+    a{
+        @extend %radius3;
+       color:nth($blueAsh,1);
+       border:1px solid nth($blueAsh,1);
+        background:nth($baseColor,1);
+        padding:4px 10px;       
+        margin:0 5px;
+       margin:0 4px;
+       &:hover{
+           border:1px solid nth($blue,3);
+            color:nth($blue,3);
+       }
+    }
+    .next{
+        &:hover{
+            color:#fff;
+            background:nth($blue,1);
+        }
+    }
+    .current{
+        @extend %radius3;
+        color:nth($baseColor,1);
+        border:1px solid nth($blue,3);
+        background:nth($blue,1);
+        padding:4px 10px;       
+        margin:0 5px;
+        font-weight:bold;
+       }
+    .pages-activity{
+        border:1px solid nth($blue,3);
+        color:nth($baseColor,1);
+        background:nth($blue,2);
+        padding:4px 10px;       
+        margin:0 10px;
+        &:hover{
+            color:nth($baseColor,1);
+            background:nth($blue,1);
+        }
+    }
+}
