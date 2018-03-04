@@ -23,6 +23,8 @@
         <module>QfP2p_SSOWeb</module>
         <module>Oracle_Case</module>
         <module>QfP2p_MQClient</module>
+        <module>QfP2p_LoanService</module>
+        <module>QfP2p_LoanProvider</module>
     </modules>
     <packaging>pom</packaging>
     <!--声明版本号-->

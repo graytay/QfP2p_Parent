@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/Oracle_Case/Oracle_Case.iml" filepath="$PROJECT_DIR$/Oracle_Case/Oracle_Case.iml" />
       <module fileurl="file://$PROJECT_DIR$/QfP2p_BgWeb/QfP2p_BgWeb.iml" filepath="$PROJECT_DIR$/QfP2p_BgWeb/QfP2p_BgWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/QfP2p_Common/QfP2p_Common.iml" filepath="$PROJECT_DIR$/QfP2p_Common/QfP2p_Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QfP2p_LoanProvider/QfP2p_LoanProvider.iml" filepath="$PROJECT_DIR$/QfP2p_LoanProvider/QfP2p_LoanProvider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QfP2p_LoanService/QfP2p_LoanService.iml" filepath="$PROJECT_DIR$/QfP2p_LoanService/QfP2p_LoanService.iml" />
       <module fileurl="file://$PROJECT_DIR$/QfP2p_MQClient/QfP2p_MQClient.iml" filepath="$PROJECT_DIR$/QfP2p_MQClient/QfP2p_MQClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/QfP2p_Parent.iml" filepath="$PROJECT_DIR$/QfP2p_Parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/QfP2p_SSOService/QfP2p_SSOService.iml" filepath="$PROJECT_DIR$/QfP2p_SSOService/QfP2p_SSOService.iml" />

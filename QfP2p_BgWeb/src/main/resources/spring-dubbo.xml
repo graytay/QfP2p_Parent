@@ -16,5 +16,7 @@ http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubb
     <dubbo:application name="user-cus"></dubbo:application>
     <!--代理服务   -->
     <dubbo:reference interface="com.qf.userservice.UserService" id="userService" check="false"></dubbo:reference>
-
+    <dubbo:reference interface="com.qf.userservice.AccountService" id="accountService" check="false"></dubbo:reference>
+    <dubbo:reference interface="com.qf.userservice.LogService" id="logService" check="false"></dubbo:reference>
+    <dubbo:reference interface="com.qf.service.loan.QuickLoanService" id="quickloanService" check="false"></dubbo:reference>
 </beans>

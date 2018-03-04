@@ -12,11 +12,15 @@
     <artifactId>QfP2p_MQClient</artifactId>
 <dependencies>
     <dependency>
+        <artifactId>QfP2p_Common</artifactId>
+        <groupId>com.qf.p2p</groupId>
+        <version>1.0</version>
+    </dependency>
+    <dependency>
         <artifactId>QfP2p_UserDao</artifactId>
         <groupId>com.qf.p2p</groupId>
         <version>1.0</version>
     </dependency>
-
 </dependencies>
 
 </project>

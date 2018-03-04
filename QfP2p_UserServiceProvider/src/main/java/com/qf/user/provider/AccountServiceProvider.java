@@ -1,12 +1,12 @@
 package com.qf.user.provider;
 
-import com.qf.user.dao.TAccountMapper;
-import com.qf.user.dao.TUserdetailMapper;
-import com.qf.user.dao.TUsersecurityMapper;
-import com.qf.user.po.TAccount;
-import com.qf.user.po.TUser;
-import com.qf.user.po.TUserdetail;
-import com.qf.user.po.TUsersecurity;
+import com.qf.dao.user.TAccountMapper;
+import com.qf.dao.user.TUserdetailMapper;
+import com.qf.dao.user.TUsersecurityMapper;
+import com.qf.user.po.user.TAccount;
+import com.qf.user.po.user.TUser;
+import com.qf.user.po.user.TUserdetail;
+import com.qf.user.po.user.TUsersecurity;
 import com.qf.user.po.util.EncryptUtils;
 import com.qf.user.po.vo.InitUser;
 import com.qf.user.po.vo.ResultJson;

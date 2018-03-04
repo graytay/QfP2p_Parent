@@ -14,6 +14,8 @@
         <module name="QfP2p_BgWeb" />
         <module name="QfP2p_Common" />
         <module name="QfP2p_domain" />
+        <module name="QfP2p_LoanProvider" />
+        <module name="QfP2p_LoanService" />
         <module name="QfP2p_MQClient" />
         <module name="QfP2p_SSOService" />
         <module name="QfP2p_SSOWeb" />
@@ -32,6 +34,8 @@
       <module name="QfP2p_BgWeb" target="1.8" />
       <module name="QfP2p_Common" target="1.8" />
       <module name="QfP2p_domain" target="1.8" />
+      <module name="QfP2p_LoanProvider" target="1.8" />
+      <module name="QfP2p_LoanService" target="1.8" />
       <module name="QfP2p_MQClient" target="1.8" />
       <module name="QfP2p_Parent" target="1.8" />
       <module name="QfP2p_SSOService" target="1.8" />

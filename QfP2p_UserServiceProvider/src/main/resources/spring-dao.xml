@@ -77,7 +77,7 @@ http://www.springframework.org/schema/aop
 
     </aop:config>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.qf.user.dao"></property>
+        <property name="basePackage" value="com.qf.dao.user"></property>
     </bean>
 
 </beans>

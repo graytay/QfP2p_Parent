@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.user.TUsersecurityMapper">
+  <resultMap id="BaseResultMap" type="com.qf.user.po.user.TUsersecurity">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="payauth" jdbcType="INTEGER" property="payauth" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="cardno" jdbcType="VARCHAR" property="cardno" />
+    <result column="cardauth" jdbcType="INTEGER" property="cardauth" />
+    <result column="siteauth" jdbcType="INTEGER" property="siteauth" />
+    <result column="phoneauth" jdbcType="INTEGER" property="phoneauth" />
+    <result column="email1auth" jdbcType="INTEGER" property="email1auth" />
+    <result column="verifier" jdbcType="VARCHAR" property="verifier" />
+    <result column="aid" jdbcType="INTEGER" property="aid" />
+    <result column="updatetime" jdbcType="TIMESTAMP" property="updatetime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, payauth, realname, cardno, cardauth, siteauth, phoneauth, email1auth, verifier, 
+    aid, updatetime
+  </sql>
+  <select id="selectByExample" parameterType="com.qf.user.po.user.TUsersecurityExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_usersecurity
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_usersecurity
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_usersecurity
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.qf.user.po.user.TUsersecurityExample">
+    delete from t_usersecurity
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.qf.user.po.user.TUsersecurity">
+    insert into t_usersecurity (id, payauth, realname, 
+      cardno, cardauth, siteauth, 
+      phoneauth, email1auth, verifier, 
+      aid, updatetime)
+    values (#{id,jdbcType=INTEGER}, #{payauth,jdbcType=INTEGER}, #{realname,jdbcType=VARCHAR}, 
+      #{cardno,jdbcType=VARCHAR}, #{cardauth,jdbcType=INTEGER}, #{siteauth,jdbcType=INTEGER}, 
+      #{phoneauth,jdbcType=INTEGER}, #{email1auth,jdbcType=INTEGER}, #{verifier,jdbcType=VARCHAR}, 
+      #{aid,jdbcType=INTEGER}, #{updatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.qf.user.po.user.TUsersecurity">
+    insert into t_usersecurity
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="payauth != null">
+        payauth,
+      </if>
+      <if test="realname != null">
+        realname,
+      </if>
+      <if test="cardno != null">
+        cardno,
+      </if>
+      <if test="cardauth != null">
+        cardauth,
+      </if>
+      <if test="siteauth != null">
+        siteauth,
+      </if>
+      <if test="phoneauth != null">
+        phoneauth,
+      </if>
+      <if test="email1auth != null">
+        email1auth,
+      </if>
+      <if test="verifier != null">
+        verifier,
+      </if>
+      <if test="aid != null">
+        aid,
+      </if>
+      <if test="updatetime != null">
+        updatetime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="payauth != null">
+        #{payauth,jdbcType=INTEGER},
+      </if>
+      <if test="realname != null">
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="cardno != null">
+        #{cardno,jdbcType=VARCHAR},
+      </if>
+      <if test="cardauth != null">
+        #{cardauth,jdbcType=INTEGER},
+      </if>
+      <if test="siteauth != null">
+        #{siteauth,jdbcType=INTEGER},
+      </if>
+      <if test="phoneauth != null">
+        #{phoneauth,jdbcType=INTEGER},
+      </if>
+      <if test="email1auth != null">
+        #{email1auth,jdbcType=INTEGER},
+      </if>
+      <if test="verifier != null">
+        #{verifier,jdbcType=VARCHAR},
+      </if>
+      <if test="aid != null">
+        #{aid,jdbcType=INTEGER},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.qf.user.po.user.TUsersecurityExample" resultType="java.lang.Long">
+    select count(*) from t_usersecurity
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_usersecurity
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.payauth != null">
+        payauth = #{record.payauth,jdbcType=INTEGER},
+      </if>
+      <if test="record.realname != null">
+        realname = #{record.realname,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cardno != null">
+        cardno = #{record.cardno,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cardauth != null">
+        cardauth = #{record.cardauth,jdbcType=INTEGER},
+      </if>
+      <if test="record.siteauth != null">
+        siteauth = #{record.siteauth,jdbcType=INTEGER},
+      </if>
+      <if test="record.phoneauth != null">
+        phoneauth = #{record.phoneauth,jdbcType=INTEGER},
+      </if>
+      <if test="record.email1auth != null">
+        email1auth = #{record.email1auth,jdbcType=INTEGER},
+      </if>
+      <if test="record.verifier != null">
+        verifier = #{record.verifier,jdbcType=VARCHAR},
+      </if>
+      <if test="record.aid != null">
+        aid = #{record.aid,jdbcType=INTEGER},
+      </if>
+      <if test="record.updatetime != null">
+        updatetime = #{record.updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_usersecurity
+    set id = #{record.id,jdbcType=INTEGER},
+      payauth = #{record.payauth,jdbcType=INTEGER},
+      realname = #{record.realname,jdbcType=VARCHAR},
+      cardno = #{record.cardno,jdbcType=VARCHAR},
+      cardauth = #{record.cardauth,jdbcType=INTEGER},
+      siteauth = #{record.siteauth,jdbcType=INTEGER},
+      phoneauth = #{record.phoneauth,jdbcType=INTEGER},
+      email1auth = #{record.email1auth,jdbcType=INTEGER},
+      verifier = #{record.verifier,jdbcType=VARCHAR},
+      aid = #{record.aid,jdbcType=INTEGER},
+      updatetime = #{record.updatetime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qf.user.po.user.TUsersecurity">
+    update t_usersecurity
+    <set>
+      <if test="payauth != null">
+        payauth = #{payauth,jdbcType=INTEGER},
+      </if>
+      <if test="realname != null">
+        realname = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="cardno != null">
+        cardno = #{cardno,jdbcType=VARCHAR},
+      </if>
+      <if test="cardauth != null">
+        cardauth = #{cardauth,jdbcType=INTEGER},
+      </if>
+      <if test="siteauth != null">
+        siteauth = #{siteauth,jdbcType=INTEGER},
+      </if>
+      <if test="phoneauth != null">
+        phoneauth = #{phoneauth,jdbcType=INTEGER},
+      </if>
+      <if test="email1auth != null">
+        email1auth = #{email1auth,jdbcType=INTEGER},
+      </if>
+      <if test="verifier != null">
+        verifier = #{verifier,jdbcType=VARCHAR},
+      </if>
+      <if test="aid != null">
+        aid = #{aid,jdbcType=INTEGER},
+      </if>
+      <if test="updatetime != null">
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qf.user.po.user.TUsersecurity">
+    update t_usersecurity
+    set payauth = #{payauth,jdbcType=INTEGER},
+      realname = #{realname,jdbcType=VARCHAR},
+      cardno = #{cardno,jdbcType=VARCHAR},
+      cardauth = #{cardauth,jdbcType=INTEGER},
+      siteauth = #{siteauth,jdbcType=INTEGER},
+      phoneauth = #{phoneauth,jdbcType=INTEGER},
+      email1auth = #{email1auth,jdbcType=INTEGER},
+      verifier = #{verifier,jdbcType=VARCHAR},
+      aid = #{aid,jdbcType=INTEGER},
+      updatetime = #{updatetime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,8 +1,9 @@
 package com.qf.user.provider;
 
-import com.qf.user.po.TUser;
+import com.qf.user.po.user.TUser;
+import com.qf.user.po.user.TUserdetail;
 import com.qf.user.po.vo.ResultJson;
-import com.qf.user.dao.TUserMapper;
+import com.qf.dao.user.TUserMapper;
 import com.qf.userservice.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,7 +24,17 @@ public class UserServiceProvider implements UserService{
     }
 
     @Override
-    public ResultJson login(TUser user) {
+    public ResultJson login(String name, String password) {
+        return null;
+    }
+
+    @Override
+    public ResultJson selectIP(int id) {
+        return null;
+    }
+
+    @Override
+    public ResultJson updateUD(TUserdetail tUserdetail) {
         return null;
     }
 

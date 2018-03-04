@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.user.TLogMapper">
+  <resultMap id="brm" type="com.qf.user.po.user.TLog">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="ip" jdbcType="VARCHAR" property="ip" />
+    <result column="msg" property="msg"/>
+  </resultMap>
+
+
+  <select id="selectByPage" resultMap="brm">
+    select id,msg,ip,type,createtime
+    from t_log
+    <if test="msg!=null">
+      where msg like concat('%',#{msg},'%')
+    </if>
+   limit #{index},#{count}
+  </select>
+
+  <insert id="insert" parameterType="com.qf.user.po.user.TLog">
+    insert into t_log (id, type, createtime, ip, msg)
+    values (#{id,jdbcType=INTEGER}, #{type,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, 
+      #{ip,jdbcType=VARCHAR}, #{msg,jdbcType=LONGVARCHAR})
+  </insert>
+
+  <select id="selectCount"  resultType="java.lang.Long" >
+    select count(id) from t_log
+    <if test="msg!=null">
+      where msg like concat('%',#{msg},'%')
+    </if>
+  </select>
+
+</mapper>
